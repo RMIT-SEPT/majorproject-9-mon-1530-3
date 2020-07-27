@@ -3,7 +3,7 @@
 # Group 00
 
 ## Members
-* SURNAME, GivenName (sXXXX)
+* BALGOS, Aren Carter (s3728738)
 * SURNAME, GivenName (sXXXX)
 * SURNAME, GivenName (sXXXX)
 * SURNAME, GivenName (sXXXX)
