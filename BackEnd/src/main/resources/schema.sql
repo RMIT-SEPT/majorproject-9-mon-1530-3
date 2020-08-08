@@ -1,6 +1,6 @@
 DROP table if exists Bookings;
 DROP table if exists Customers;
-Drop table if exists Employee;
+DROP table if exists Employees;
 
 CREATE table Customers(
     custID INT PRIMARY KEY,
