@@ -1,4 +1,4 @@
-package com.rmit.group9.spring;
+package com.rmit.group3.spring;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package com.rmit.group9.spring;
+package com.rmit.group3.spring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
