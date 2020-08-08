@@ -13,6 +13,9 @@ public class Customers {
     private String firstName;
     private String lastName;
 
+    private Date created_At;
+    private Date updated_At;
+
     public Customers() {
     }
 
@@ -32,12 +35,6 @@ public class Customers {
         this.lastName = lastName;
     }
 
-    private Date created_At;
-
-
-
-    private Date updated_At;
-
     public Long getCustomerID() {
         return customerID;
     }
@@ -53,6 +50,7 @@ public class Customers {
     public void setEmail(String email) {
         this.email = email;
     }
+
 
     @PrePersist
     protected void onCreate() {

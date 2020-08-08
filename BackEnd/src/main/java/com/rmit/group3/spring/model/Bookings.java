@@ -17,6 +17,9 @@ public class Bookings {
     private Date created_At;
     private Date updated_At;
 
+    public Bookings() {
+
+    }
 
     public long getBookingID() {
         return bookingID;
@@ -50,9 +53,6 @@ public class Bookings {
         this.date = date;
     }
 
-    public Bookings() {
-
-    }
 
     @PrePersist
     protected void onCreate() {

@@ -14,11 +14,12 @@ public class Employees{
     private String lastName;
     private String email;
 
-    public Long getEmployeeID() {
-        return employeeID;
-    }
 
     public Employees() {
+    }
+
+    public Long getEmployeeID() {
+        return employeeID;
     }
 
     public void setEmployeeID(Long employeeID) {
@@ -52,6 +53,7 @@ public class Employees{
     private Date created_At;
     private Date updated_At;
 
+    
     @PrePersist
     protected void onCreate() {
         this.created_At = new Date();
