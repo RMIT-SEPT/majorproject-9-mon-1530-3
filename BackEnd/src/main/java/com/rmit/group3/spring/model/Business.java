@@ -2,6 +2,7 @@ package com.rmit.group3.spring.model;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.HashMap;
 
 @Entity
 public class Business {
@@ -13,11 +14,25 @@ public class Business {
     private String email;
     private int phone;
 
+    public Date getCreated_At() {
+        return created_At;
+    }
+
+    public void setCreated_At(Date created_At) {
+        this.created_At = created_At;
+    }
+
+    public Date getUpdated_At() {
+        return updated_At;
+    }
+
+    public void setUpdated_At(Date updated_At) {
+        this.updated_At = updated_At;
+    }
+
     private Date created_At;
     private Date updated_At;
 
-    public Business(){
-    }
 
     public long getBusinessID() {
         return businessID;

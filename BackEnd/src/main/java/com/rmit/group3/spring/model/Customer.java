@@ -4,26 +4,19 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-public class Employees{
-
+public class Customer {
 
     @Id
-    private Long employeeID;
+    private Long customerID;
 
+    private String email;
     private String firstName;
     private String lastName;
-    private String email;
 
+    private Date created_At;
+    private Date updated_At;
 
-    public Employees() {
-    }
-
-    public Long getEmployeeID() {
-        return employeeID;
-    }
-
-    public void setEmployeeID(Long employeeID) {
-        this.employeeID = employeeID;
+    public Customer() {
     }
 
     public String getFirstName() {
@@ -42,6 +35,14 @@ public class Employees{
         this.lastName = lastName;
     }
 
+    public Long getCustomerID() {
+        return customerID;
+    }
+
+    public void setCustomerID(Long customerID) {
+        this.customerID = customerID;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -50,10 +51,22 @@ public class Employees{
         this.email = email;
     }
 
-    private Date created_At;
-    private Date updated_At;
+    public Date getCreated_At() {
+        return created_At;
+    }
 
-    
+    public void setCreated_At(Date created_At) {
+        this.created_At = created_At;
+    }
+
+    public Date getUpdated_At() {
+        return updated_At;
+    }
+
+    public void setUpdated_At(Date updated_At) {
+        this.updated_At = updated_At;
+    }
+
     @PrePersist
     protected void onCreate() {
         this.created_At = new Date();
@@ -63,5 +76,4 @@ public class Employees{
     protected void onUpdate() {
         this.updated_At = new Date();
     }
-
 }

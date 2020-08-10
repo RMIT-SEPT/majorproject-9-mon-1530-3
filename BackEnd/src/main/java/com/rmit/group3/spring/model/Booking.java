@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-public class Bookings {
+public class Booking {
 
     @Id
     private long bookingID;
@@ -14,10 +14,36 @@ public class Bookings {
     private long employeeID;
     private Date date;
 
+    private boolean confirmed;
+
+    public boolean isConfirmed() {
+        return confirmed;
+    }
+
+    public void setConfirmed(boolean confirmed) {
+        this.confirmed = confirmed;
+    }
+
+    public Date getCreated_At() {
+        return created_At;
+    }
+
+    public void setCreated_At(Date created_At) {
+        this.created_At = created_At;
+    }
+
+    public Date getUpdated_At() {
+        return updated_At;
+    }
+
+    public void setUpdated_At(Date updated_At) {
+        this.updated_At = updated_At;
+    }
+
     private Date created_At;
     private Date updated_At;
 
-    public Bookings() {
+    public Booking() {
 
     }
 
