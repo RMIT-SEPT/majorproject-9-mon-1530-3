@@ -7,17 +7,17 @@ class Register extends Component {
       <div>
         <h1>CREATE A NEW ACCOUNT</h1>
         <br></br>
-        <h4>First name</h4>
+        <h5>First name</h5>
         <input />
-        <h4>Last name</h4>
+        <h5>Last name</h5>
         <input />
-        <h4>Email address</h4>
+        <h5>Email address</h5>
         <input />
-        <h4>Username</h4>
+        <h5>Username</h5>
         <input />
-        <h4>Password</h4>
+        <h5>Password</h5>
         <input type="password" />
-        <h4>Country</h4>
+        <h5>Country</h5>
         <input />
         <br></br>
         <br></br>
