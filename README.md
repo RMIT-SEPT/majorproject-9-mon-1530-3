@@ -12,7 +12,7 @@
 ## Records
 
 * Github repository : https://github.com/RMIT-SEPT/majorproject-9-mon-1530-3.git
-* ClickUp Workspace : https://share.clickup.com/l/h/4-3805979-1/4cf5a58e8f1cc87
+* Notion Workspace: https://www.notion.so/58ccc2f443be4baca3503692c7356ed5?v=ab9ae850eb8e4ef79ef39d70c8742c1c
 
 
 ## Code documentation
