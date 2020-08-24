@@ -1,6 +1,12 @@
 package com.rmit.group3.spring.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.NumberFormat;
+
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.HashMap;
 
@@ -11,7 +17,10 @@ public class Business {
     @Id
     private long businessID;
 
+    @NotBlank(message = "Requires valid email")
+    @Email(message = "Requires valid email")
     private String email;
+
     private int phone;
 
     public Date getCreated_At() {
@@ -30,9 +39,10 @@ public class Business {
         this.updated_At = updated_At;
     }
 
+    @JsonFormat(pattern = "dd-mm-yyyy")
     private Date created_At;
+    @JsonFormat(pattern = "dd-mm-yyyy")
     private Date updated_At;
-
 
     public long getBusinessID() {
         return businessID;

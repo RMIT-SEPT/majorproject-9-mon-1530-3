@@ -1,6 +1,9 @@
 package com.rmit.group3.spring.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.Date;
 
 @Entity
@@ -9,12 +12,23 @@ public class Booking {
     @Id
     private long bookingID;
 
-
+    @NotBlank(message = "Requires customer ID")
     private long customerID;
+
+    @NotBlank(message = "Requires employee ID")
     private long employeeID;
+
+    @NotBlank(message = "requires booking date")
+    @JsonFormat(pattern = "dd-mm-yyyy@HH:mm")
     private Date date;
 
     private boolean confirmed;
+
+
+    @JsonFormat(pattern = "dd-mm-yyyy")
+    private Date created_At;
+    @JsonFormat(pattern = "dd-mm-yyyy")
+    private Date updated_At;
 
     public boolean isConfirmed() {
         return confirmed;
@@ -40,8 +54,6 @@ public class Booking {
         this.updated_At = updated_At;
     }
 
-    private Date created_At;
-    private Date updated_At;
 
     public Booking() {
 
