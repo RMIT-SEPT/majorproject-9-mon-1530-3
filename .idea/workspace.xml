@@ -1,35 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/classes" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:ConnectFrontBack" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2207653e-6691-4a2a-a8d4-6eb733ee9b33" name="Default Changelist" comment="corrected and renamed to group3" />
+    <list default="true" id="57280a33-6cac-4ca6-8464-e1b884fcf9b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/webController/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/test/java/model/EmployeesTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/test/java/model/EmployeesTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/Repositories/CustomerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/Repositories/CustomerRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Booking.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Booking.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Business.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Business.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/service/CustomerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/webController/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/webController/CustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/test-classes/com/rmit/group3/spring/ApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/test-classes/com/rmit/group3/spring/ApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/test-classes/model/BookingsTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/test-classes/model/BookingsTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/test-classes/model/BusinessTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/test-classes/model/BusinessTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/test-classes/model/CustomersTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/test-classes/model/CustomersTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/test-classes/model/EmployeesTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/test-classes/model/EmployeesTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/components/loginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/components/loginPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +63,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="architecture" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -80,6 +94,7 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -89,23 +104,16 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="generated-requests#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" runType="Run single request">
+      <method v="2" />
     </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="spring" />
@@ -114,11 +122,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.generated-requests#1" />
+      </list>
+    </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2207653e-6691-4a2a-a8d4-6eb733ee9b33" name="Default Changelist" comment="" />
+      <changelist id="57280a33-6cac-4ca6-8464-e1b884fcf9b4" name="Default Changelist" comment="" />
       <created>1596437365578</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -133,6 +149,13 @@
       <workItem from="1597041223957" duration="354000" />
       <workItem from="1597200575884" duration="29000" />
       <workItem from="1597284688582" duration="1885000" />
+      <workItem from="1598061374747" duration="9236000" />
+      <workItem from="1598143955449" duration="2067000" />
+      <workItem from="1598224488442" duration="3998000" />
+      <workItem from="1598230354538" duration="6950000" />
+      <workItem from="1598256393852" duration="1100000" />
+      <workItem from="1598328002213" duration="719000" />
+      <workItem from="1598574347423" duration="8963000" />
     </task>
     <task id="LOCAL-00001" summary="corrected and renamed to group3">
       <created>1596437743075</created>
@@ -159,7 +182,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -172,7 +195,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/classes" />
+                        <option value="ConnectFrontBack" />
                       </list>
                     </value>
                   </entry>
@@ -188,7 +211,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="corrected and renamed to group3" />
     <MESSAGE value="Created and implemented Repo,Service &amp; Controller for all classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created and implemented Repo,Service &amp; Controller for all classes" />
+    <MESSAGE value="Pages are accessible" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pages are accessible" />
   </component>
   <component name="WindowStateProjectService">
     <state x="384" y="141" key="#Project_Structure" timestamp="1597284927633">
@@ -211,50 +235,59 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="1042" y="587" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1596437273505" />
-    <state x="100" y="100" width="2360" height="1240" key="DiffContextDialog" timestamp="1596437767367">
-      <screen x="0" y="23" width="2560" height="1338" />
+    <state x="100" y="60" width="2360" height="964" key="DiffContextDialog" timestamp="1598231339932">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
+    <state x="100" y="60" width="2360" height="964" key="DiffContextDialog/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598231339932" />
     <state x="100" y="100" width="2360" height="1240" key="DiffContextDialog/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1596437476321" />
     <state x="100" y="100" width="2360" height="1240" key="DiffContextDialog/0.23.2560.1338/-1080.-446.1080.2537@0.23.2560.1338" timestamp="1596437767367" />
-    <state width="1750" height="288" key="GridCell.Tab.0.bottom" timestamp="1597286410352">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state width="1234" height="281" key="GridCell.Tab.0.bottom" timestamp="1598255935443">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1750" height="288" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597286410352" />
+    <state width="1234" height="281" key="GridCell.Tab.0.bottom/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598255935443" />
     <state width="2518" height="445" key="GridCell.Tab.0.bottom/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1597028925666" />
-    <state width="1750" height="288" key="GridCell.Tab.0.center" timestamp="1597286410351">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state width="1234" height="281" key="GridCell.Tab.0.center" timestamp="1598255935443">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1750" height="288" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597286410351" />
+    <state width="1234" height="281" key="GridCell.Tab.0.center/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598255935443" />
     <state width="2518" height="445" key="GridCell.Tab.0.center/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1597028925665" />
-    <state width="1750" height="288" key="GridCell.Tab.0.left" timestamp="1597286410350">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state width="1234" height="281" key="GridCell.Tab.0.left" timestamp="1598255935442">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1750" height="288" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597286410350" />
+    <state width="1234" height="281" key="GridCell.Tab.0.left/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598255935442" />
     <state width="2518" height="445" key="GridCell.Tab.0.left/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1597028925664" />
-    <state width="1750" height="288" key="GridCell.Tab.0.right" timestamp="1597286410352">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state width="1234" height="281" key="GridCell.Tab.0.right" timestamp="1598255935443">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1750" height="288" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597286410352" />
+    <state width="1234" height="281" key="GridCell.Tab.0.right/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598255935443" />
     <state width="2518" height="445" key="GridCell.Tab.0.right/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1597028925665" />
-    <state width="1750" height="288" key="GridCell.Tab.1.bottom" timestamp="1597286410354">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state width="1234" height="281" key="GridCell.Tab.1.bottom" timestamp="1598255935443">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1750" height="288" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597286410354" />
+    <state width="1234" height="281" key="GridCell.Tab.1.bottom/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598255935443" />
     <state width="2518" height="445" key="GridCell.Tab.1.bottom/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1597028925668" />
-    <state width="1750" height="288" key="GridCell.Tab.1.center" timestamp="1597286410353">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state width="1234" height="281" key="GridCell.Tab.1.center" timestamp="1598255935443">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1750" height="288" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597286410353" />
+    <state width="1234" height="281" key="GridCell.Tab.1.center/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598255935443" />
     <state width="2518" height="445" key="GridCell.Tab.1.center/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1597028925667" />
-    <state width="1750" height="288" key="GridCell.Tab.1.left" timestamp="1597286410353">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state width="1234" height="281" key="GridCell.Tab.1.left" timestamp="1598255935443">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1750" height="288" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597286410353" />
+    <state width="1234" height="281" key="GridCell.Tab.1.left/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598255935443" />
     <state width="2518" height="445" key="GridCell.Tab.1.left/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1597028925666" />
-    <state width="1750" height="288" key="GridCell.Tab.1.right" timestamp="1597286410353">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state width="1234" height="281" key="GridCell.Tab.1.right" timestamp="1598255935443">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1750" height="288" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597286410353" />
+    <state width="1234" height="281" key="GridCell.Tab.1.right/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598255935443" />
     <state width="2518" height="445" key="GridCell.Tab.1.right/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1597028925667" />
     <state width="2518" height="520" key="GridCell.Tab.2.bottom" timestamp="1596870874169">
       <screen x="0" y="0" width="2560" height="1440" />
@@ -276,6 +309,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="534" y="328" key="MultipleFileMergeDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597286301575" />
+    <state x="120" y="106" key="SettingsEditor" timestamp="1598578146574">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="120" y="106" key="SettingsEditor/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598578146574" />
     <state x="616" y="358" width="1281" height="520" key="Vcs.Push.Dialog.v2" timestamp="1597286521996">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -293,5 +330,17 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="923" y="440" key="git4idea.branch.GitSmartOperationDialog/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1596858879502" />
+    <state x="850" y="308" key="git4idea.merge.GitMergeDialog" timestamp="1598251506590">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="850" y="308" key="git4idea.merge.GitMergeDialog/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598251506590" />
+    <state x="850" y="308" key="git4idea.merge.GitPullDialog" timestamp="1598230305716">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="850" y="308" key="git4idea.merge.GitPullDialog/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598230305716" />
+    <state x="303" y="242" width="672" height="678" key="search.everywhere.popup" timestamp="1598578068839">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="303" y="242" width="672" height="678" key="search.everywhere.popup/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598578068839" />
   </component>
 </project>

@@ -5,6 +5,7 @@ class Login extends Component {
   render() {
     return (
       <div>
+          <a className="navbar-link" href="/register">Register</a>
         <h1>Login Page</h1>
         <br></br>
         <input placeholder="Username" />
