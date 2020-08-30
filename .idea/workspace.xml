@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -17,32 +20,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57280a33-6cac-4ca6-8464-e1b884fcf9b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/webController/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/build/asset-manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/build/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/build/precache-manifest.ee71180cb4785ceaebc79e8a1fbea075.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/build/service-worker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/build/static/css/2.b10a8095.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/build/static/css/2.b10a8095.chunk.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/build/static/css/main.5f361e03.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/build/static/css/main.5f361e03.chunk.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/build/static/js/2.e5e3b8f4.chunk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/build/static/js/2.e5e3b8f4.chunk.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/build/static/js/2.e5e3b8f4.chunk.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/build/static/js/main.66a8c8b8.chunk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/build/static/js/main.66a8c8b8.chunk.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/build/static/js/runtime-main.5424484b.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/build/static/js/runtime-main.5424484b.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/build/static/media/glyphicons-halflings-regular.448c34a5.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/build/static/media/glyphicons-halflings-regular.89889688.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/build/static/media/glyphicons-halflings-regular.e18bbf61.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/build/static/media/glyphicons-halflings-regular.f4769f9b.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/build/static/media/glyphicons-halflings-regular.fa277232.woff" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/test/java/model/EmployeesTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/test/java/model/EmployeesTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/Repositories/CustomerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/Repositories/CustomerRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Booking.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Booking.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Business.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Business.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/service/CustomerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/webController/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/webController/CustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/test-classes/com/rmit/group3/spring/ApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/test-classes/com/rmit/group3/spring/ApplicationTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/test-classes/model/BookingsTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/test-classes/model/BookingsTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/test-classes/model/BusinessTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/test-classes/model/BusinessTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/test-classes/model/CustomersTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/test-classes/model/CustomersTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/test-classes/model/EmployeesTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/test-classes/model/EmployeesTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/spring.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/spring.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/components/loginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/components/loginPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/components/indexPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/components/indexPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +130,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -241,28 +243,28 @@
     <state x="100" y="60" width="2360" height="964" key="DiffContextDialog/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598231339932" />
     <state x="100" y="100" width="2360" height="1240" key="DiffContextDialog/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1596437476321" />
     <state x="100" y="100" width="2360" height="1240" key="DiffContextDialog/0.23.2560.1338/-1080.-446.1080.2537@0.23.2560.1338" timestamp="1596437767367" />
-    <state width="1234" height="281" key="GridCell.Tab.0.bottom" timestamp="1598255935443">
-      <screen x="0" y="0" width="2560" height="1040" />
+    <state width="1457" height="186" key="GridCell.Tab.0.bottom" timestamp="1598762208183">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="288" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597286410352" />
+    <state width="1457" height="186" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1598762208183" />
     <state width="1234" height="281" key="GridCell.Tab.0.bottom/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598255935443" />
     <state width="2518" height="445" key="GridCell.Tab.0.bottom/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1597028925666" />
-    <state width="1234" height="281" key="GridCell.Tab.0.center" timestamp="1598255935443">
-      <screen x="0" y="0" width="2560" height="1040" />
+    <state width="1457" height="186" key="GridCell.Tab.0.center" timestamp="1598762208182">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="288" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597286410351" />
+    <state width="1457" height="186" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1598762208182" />
     <state width="1234" height="281" key="GridCell.Tab.0.center/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598255935443" />
     <state width="2518" height="445" key="GridCell.Tab.0.center/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1597028925665" />
-    <state width="1234" height="281" key="GridCell.Tab.0.left" timestamp="1598255935442">
-      <screen x="0" y="0" width="2560" height="1040" />
+    <state width="1457" height="186" key="GridCell.Tab.0.left" timestamp="1598762208181">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="288" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597286410350" />
+    <state width="1457" height="186" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1598762208181" />
     <state width="1234" height="281" key="GridCell.Tab.0.left/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598255935442" />
     <state width="2518" height="445" key="GridCell.Tab.0.left/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1597028925664" />
-    <state width="1234" height="281" key="GridCell.Tab.0.right" timestamp="1598255935443">
-      <screen x="0" y="0" width="2560" height="1040" />
+    <state width="1457" height="186" key="GridCell.Tab.0.right" timestamp="1598762208183">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="288" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597286410352" />
+    <state width="1457" height="186" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1598762208183" />
     <state width="1234" height="281" key="GridCell.Tab.0.right/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598255935443" />
     <state width="2518" height="445" key="GridCell.Tab.0.right/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1597028925665" />
     <state width="1234" height="281" key="GridCell.Tab.1.bottom" timestamp="1598255935443">
