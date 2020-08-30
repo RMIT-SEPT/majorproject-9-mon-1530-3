@@ -7,8 +7,6 @@ class Index extends Component {
       <div>
         <h1>Index</h1>
         <br></br>
-        <a href = "/login">Login</a> <br></br>
-        <a href = "/Register">Register</a>
       </div>
     );
   }
