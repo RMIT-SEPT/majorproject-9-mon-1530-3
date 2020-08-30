@@ -36,6 +36,19 @@ public class BookingController {
 
         }
         Booking booking1 = bookingService.saveOrUpdateBooking(booking);
-        return new ResponseEntity<>(booking, HttpStatus.CREATED);
+        return new ResponseEntity<>(booking1, HttpStatus.CREATED);
+    }
+
+    public ResponseEntity<?> deleteBooking(@Valid @RequestBody Booking booking, BindingResult result)
+    {
+        if(result.hasErrors()){
+            Map<String,String> errorMap = new HashMap<>();
+
+            for(FieldError error:result.getFieldErrors()){
+                return new ResponseEntity<List<FieldError>>(result.getFieldErrors(),HttpStatus.BAD_REQUEST);
+            }
+        }
+        bookingService.deleteBooking(booking);
+        return new ResponseEntity<>(booking,HttpStatus.ACCEPTED);
     }
 }
