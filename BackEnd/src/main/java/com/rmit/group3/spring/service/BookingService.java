@@ -15,4 +15,5 @@ public class BookingService {
     {
         return bookingRepository.save(booking);
     }
+    public void deleteBooking(Booking booking) { bookingRepository.delete(booking);}
 }

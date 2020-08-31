@@ -1,34 +1,48 @@
 package com.rmit.group3.spring.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Entity
 public class Booking {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GenericGenerator(name = "native",strategy = "native")
     private long bookingID;
 
-    @NotBlank(message = "Requires customer ID")
+    @NotNull
     private long customerID;
 
-    @NotBlank(message = "Requires employee ID")
+    @NotNull
     private long employeeID;
 
-    @NotBlank(message = "requires booking date")
-    @JsonFormat(pattern = "dd-mm-yyyy@HH:mm")
+    @JsonFormat(pattern = "yyyy-mm-dd")
     private Date date;
+
+    @JsonFormat(pattern = "HH:mm")
+    private Date time;
 
     private boolean confirmed;
 
 
-    @JsonFormat(pattern = "dd-mm-yyyy")
+    @JsonFormat(pattern = "yyyy-mm-dd")
     private Date created_At;
-    @JsonFormat(pattern = "dd-mm-yyyy")
+    @JsonFormat(pattern = "yyyy-mm-dd")
     private Date updated_At;
+
+    public Date getTime() {
+        return time;
+    }
+
+    public void setTime(Date time) {
+        this.time = time;
+    }
 
     public boolean isConfirmed() {
         return confirmed;
@@ -80,8 +94,7 @@ public class Booking {
     }
 
     public void setEmployeeID(long employeeID) {
-        this.employeeID = employeeID;
-    }
+        this.employeeID = employeeID; }
 
     public Date getDate() {
         return date;
