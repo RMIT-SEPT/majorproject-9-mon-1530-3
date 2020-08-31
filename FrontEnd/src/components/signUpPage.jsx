@@ -5,18 +5,19 @@ class Register extends Component {
   render() {
     return (
       <div>
+          <a className="navbar-link" href="/login">Login</a>
         <h1>CREATE A NEW ACCOUNT</h1>
         <br></br>
         <h5>First name</h5>
-        <input />
+        <input class="input" />
         <h5>Last name</h5>
-        <input />
+        <input class="input"/>
         <h5>Email address</h5>
-        <input />
+        <input class="input"/>
         <h5>Username</h5>
-        <input />
+        <input class="input"/>
         <h5>Password</h5>
-        <input type="password" />
+        <input class="input"type="password" />
         <h5>Country</h5>
         <input />
         <br></br>

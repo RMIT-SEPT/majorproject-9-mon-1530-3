@@ -1,7 +1,7 @@
 import React from 'react';
+import './App.css';
 import 'bootstrap/dist/css/bootstrap-theme.min.css';
 import {BrowserRouter as Router, Route} from "react-router-dom";
-import './App.css';
 import Login from './components/loginPage';
 import Register from './components/signUpPage';
 import Index from './components/indexPage';
