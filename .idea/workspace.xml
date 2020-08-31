@@ -1,45 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:ConnectFrontBack" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2207653e-6691-4a2a-a8d4-6eb733ee9b33" name="Default Changelist" comment="corrected and renamed to group3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd/spring.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/spring.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/model/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/model/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/model/Business.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/model/Business.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/model/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/webController/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/webController/BookingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/webController/BusinessController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/webController/BusinessController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/webController/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/webController/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/webController/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/webController/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Booking.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Booking.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Business.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Business.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Customer.class" afterDir="false" />
@@ -120,7 +99,10 @@
       </method>
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="2207653e-6691-4a2a-a8d4-6eb733ee9b33" name="Default Changelist" comment="" />
@@ -221,45 +203,53 @@
     </state>
     <state x="100" y="100" width="2360" height="1240" key="DiffContextDialog/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1596437476321" />
     <state x="100" y="100" width="2360" height="1240" key="DiffContextDialog/0.23.2560.1338/-1080.-446.1080.2537@0.23.2560.1338" timestamp="1596437767367" />
-    <state width="2097" height="220" key="GridCell.Tab.0.bottom" timestamp="1598240195380">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state width="1234" height="286" key="GridCell.Tab.0.bottom" timestamp="1598849447173">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1750" height="288" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597286410352" />
+    <state width="1234" height="286" key="GridCell.Tab.0.bottom/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598849447173" />
     <state width="2097" height="220" key="GridCell.Tab.0.bottom/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1598240195380" />
-    <state width="2097" height="220" key="GridCell.Tab.0.center" timestamp="1598240195379">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state width="1234" height="286" key="GridCell.Tab.0.center" timestamp="1598849447173">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1750" height="288" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597286410351" />
+    <state width="1234" height="286" key="GridCell.Tab.0.center/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598849447173" />
     <state width="2097" height="220" key="GridCell.Tab.0.center/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1598240195379" />
-    <state width="2097" height="220" key="GridCell.Tab.0.left" timestamp="1598240195378">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state width="1234" height="286" key="GridCell.Tab.0.left" timestamp="1598849447173">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1750" height="288" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597286410350" />
+    <state width="1234" height="286" key="GridCell.Tab.0.left/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598849447173" />
     <state width="2097" height="220" key="GridCell.Tab.0.left/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1598240195378" />
-    <state width="2097" height="220" key="GridCell.Tab.0.right" timestamp="1598240195380">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state width="1234" height="286" key="GridCell.Tab.0.right" timestamp="1598849447173">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1750" height="288" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597286410352" />
+    <state width="1234" height="286" key="GridCell.Tab.0.right/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598849447173" />
     <state width="2097" height="220" key="GridCell.Tab.0.right/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1598240195380" />
-    <state width="2097" height="220" key="GridCell.Tab.1.bottom" timestamp="1598240195383">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state width="1234" height="286" key="GridCell.Tab.1.bottom" timestamp="1598849447173">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1750" height="288" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597286410354" />
+    <state width="1234" height="286" key="GridCell.Tab.1.bottom/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598849447173" />
     <state width="2097" height="220" key="GridCell.Tab.1.bottom/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1598240195383" />
-    <state width="2097" height="220" key="GridCell.Tab.1.center" timestamp="1598240195382">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state width="1234" height="286" key="GridCell.Tab.1.center" timestamp="1598849447173">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1750" height="288" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597286410353" />
+    <state width="1234" height="286" key="GridCell.Tab.1.center/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598849447173" />
     <state width="2097" height="220" key="GridCell.Tab.1.center/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1598240195382" />
-    <state width="2097" height="220" key="GridCell.Tab.1.left" timestamp="1598240195381">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state width="1234" height="286" key="GridCell.Tab.1.left" timestamp="1598849447173">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1750" height="288" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597286410353" />
+    <state width="1234" height="286" key="GridCell.Tab.1.left/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598849447173" />
     <state width="2097" height="220" key="GridCell.Tab.1.left/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1598240195381" />
-    <state width="2097" height="220" key="GridCell.Tab.1.right" timestamp="1598240195382">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state width="1234" height="286" key="GridCell.Tab.1.right" timestamp="1598849447173">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1750" height="288" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597286410353" />
+    <state width="1234" height="286" key="GridCell.Tab.1.right/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598849447173" />
     <state width="2097" height="220" key="GridCell.Tab.1.right/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1598240195382" />
     <state width="2518" height="520" key="GridCell.Tab.2.bottom" timestamp="1596870874169">
       <screen x="0" y="0" width="2560" height="1440" />
