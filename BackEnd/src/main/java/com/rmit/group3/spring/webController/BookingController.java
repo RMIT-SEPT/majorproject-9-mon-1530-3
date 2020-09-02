@@ -10,6 +10,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.awt.print.Book;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +24,7 @@ public class BookingController {
     private BookingService bookingService;
 
     @PostMapping("")
-    public ResponseEntity<?>  createNewBooking(@Valid @RequestBody Booking booking, BindingResult result)
+    public ResponseEntity<?> createNewBooking(@Valid @RequestBody Booking booking, BindingResult result)
     {
         if(result.hasErrors()){
             Map<String,String> errorMap = new HashMap<>();
@@ -37,16 +38,28 @@ public class BookingController {
         return new ResponseEntity<>(booking1, HttpStatus.CREATED);
     }
 
-    public ResponseEntity<?> deleteBooking(@Valid @RequestBody Booking booking, BindingResult result)
+    @GetMapping("/{bookingID")
+    public ResponseEntity<?> getBookingByID(@PathVariable String bookingID)
     {
-        if(result.hasErrors()){
-            Map<String,String> errorMap = new HashMap<>();
-
-            for(FieldError error:result.getFieldErrors()){
-                return new ResponseEntity<List<FieldError>>(result.getFieldErrors(),HttpStatus.BAD_REQUEST);
-            }
-        }
-        bookingService.deleteBooking(booking);
-        return new ResponseEntity<>(booking,HttpStatus.ACCEPTED);
+        Booking booking = bookingService.findBookingByID(bookingID);
+        return new ResponseEntity<Booking>(booking, HttpStatus.OK);
     }
+
+    @DeleteMapping("/{bookingID}")
+    public ResponseEntity<?> deleteBooking(@PathVariable String bookingID)
+    {
+        bookingService.deleteBookingByID(bookingID);
+        return new ResponseEntity<String>("Booking with ID:" + bookingID + " was deleted", HttpStatus.OK);
+    }
+
+    @GetMapping("/all")
+    public Iterable<Booking> getAllBookings()
+    {
+        return bookingService.getAllBookings();
+    }
+
+
+
+
+
 }

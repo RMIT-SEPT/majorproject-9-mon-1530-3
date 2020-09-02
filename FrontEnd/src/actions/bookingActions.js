@@ -18,3 +18,17 @@ export function createBooking(booking) {
     }
 };
 
+export function deleteBooking(booking) {
+
+    try{
+        axios.delete("http://localhost:8080/api/booking",booking);
+    }
+    catch(err){
+        return {
+            type:GET_ERRORS,
+            payload:err.response.data
+        }
+    }
+}
+
+

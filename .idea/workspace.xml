@@ -14,33 +14,18 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:ConnectFrontBack" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:BookingFunction" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57280a33-6cac-4ca6-8464-e1b884fcf9b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/exceptions/BookingException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/model/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/model/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/Repositories/CustomerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/Repositories/CustomerRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Booking.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Booking.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Business.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Business.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/model/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/service/CustomerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/webController/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/com/rmit/group3/spring/webController/CustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/test-classes/com/rmit/group3/spring/ApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/test-classes/com/rmit/group3/spring/ApplicationTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/test-classes/model/BookingsTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/test-classes/model/BookingsTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/test-classes/model/BusinessTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/test-classes/model/BusinessTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/test-classes/model/CustomersTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/test-classes/model/CustomersTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/test-classes/model/EmployeesTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/test-classes/model/EmployeesTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/components/CreateBooking.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/components/CreateBooking.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/components/loginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/components/loginPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/Repositories/BookingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/Repositories/BookingRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/service/BookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/webController/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/webController/BookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/actions/bookingActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/actions/bookingActions.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +95,17 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RunManager" selected="Spring Boot.Application">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="generated-requests#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -155,6 +151,7 @@
       <workItem from="1598328002213" duration="719000" />
       <workItem from="1598574347423" duration="8963000" />
       <workItem from="1598826744625" duration="2612000" />
+      <workItem from="1599023835237" duration="1940000" />
     </task>
     <task id="LOCAL-00001" summary="corrected and renamed to group3">
       <created>1596437743075</created>
@@ -194,7 +191,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="ConnectFrontBack" />
+                        <option value="BookingFunction" />
                       </list>
                     </value>
                   </entry>
@@ -346,10 +343,10 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="850" y="308" key="git4idea.merge.GitPullDialog/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598230305716" />
-    <state x="212" y="261" width="670" height="731" key="search.everywhere.popup" timestamp="1598785319346">
+    <state x="212" y="261" width="670" height="731" key="search.everywhere.popup" timestamp="1599028399430">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="212" y="261" width="670" height="731" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1598785319346" />
+    <state x="212" y="261" width="670" height="731" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1599028399430" />
     <state x="303" y="242" width="672" height="678" key="search.everywhere.popup/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598578068839" />
   </component>
 </project>
