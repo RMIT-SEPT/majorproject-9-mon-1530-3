@@ -38,7 +38,7 @@ public class BookingController {
         return new ResponseEntity<>(booking1, HttpStatus.CREATED);
     }
 
-    @GetMapping("/{bookingID")
+    @GetMapping("/{bookingID}")
     public ResponseEntity<?> getBookingByID(@PathVariable String bookingID)
     {
         Booking booking = bookingService.findBookingByID(bookingID);

@@ -7,7 +7,8 @@ class Nav extends Component {
                 <div className = "container">
                     <a className = "navbar-brand" href= "/index"> Home </a>
                     <div className = "navbar-brand">
-                        <a className = "nav-link" href = "/CreateBooking"> Create Booking </a>
+                            <a className = "nav-link" href = "/CreateBooking"> Create Booking </a>
+                            <a className = "nav-link" href = "/deleteBooking"> Edit/Cancel Booking </a>
                     </div>
                     <div className = "navbar-right">
                         <div>

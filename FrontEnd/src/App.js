@@ -11,6 +11,7 @@ import Register from './components/signUpPage';
 import Index from './components/indexPage';
 import CreateBooking from './components/CreateBooking';
 import Nav from './components/Layout/Nav';
+import EditOrDeleteBooking from './components/EditOrDeleteBooking';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
               <Route exact path="/login" component={Login}/>
               <Route exact path="/register" component={Register}/>
               <Route exact path="/CreateBooking" component={CreateBooking}/>
+              <Route exact path="/DeleteBooking" component={EditOrDeleteBooking}/>
           </header>
           </div>
       </Router>

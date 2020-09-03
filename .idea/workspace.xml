@@ -20,12 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57280a33-6cac-4ca6-8464-e1b884fcf9b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/exceptions/BookingException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/components/EditOrDeleteBooking.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/Repositories/BookingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/Repositories/BookingRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/service/BookingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/webController/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/webController/BookingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/actions/bookingActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/actions/bookingActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/components/Layout/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/components/Layout/Nav.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +71,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="h2" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -151,7 +152,7 @@
       <workItem from="1598328002213" duration="719000" />
       <workItem from="1598574347423" duration="8963000" />
       <workItem from="1598826744625" duration="2612000" />
-      <workItem from="1599023835237" duration="1940000" />
+      <workItem from="1599023835237" duration="2637000" />
     </task>
     <task id="LOCAL-00001" summary="corrected and renamed to group3">
       <created>1596437743075</created>
@@ -205,6 +206,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="corrected and renamed to group3" />
     <MESSAGE value="Created and implemented Repo,Service &amp; Controller for all classes" />
     <MESSAGE value="Pages are accessible" />
