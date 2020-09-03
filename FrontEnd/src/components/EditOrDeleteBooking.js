@@ -47,7 +47,7 @@ class EditOrDeleteBooking extends Component {
                 onChange = {this.onChange}/>
             </div><br/>
             <div>
-            <input type = "submit" className = "btn btn-primary btn-block mt-4"/>
+            <input type = "submit" value = "Cancel" className = "btn btn-primary btn-block mt-4"></input>
             </div>
             </form>
             </div>

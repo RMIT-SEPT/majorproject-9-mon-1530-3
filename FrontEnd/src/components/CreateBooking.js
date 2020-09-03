@@ -42,7 +42,7 @@ class CreateBooking extends Component {
                 <h4>Create Booking:</h4>
                 <div className = "form">
                 <form onSubmit={this.onSubmit}>
-                <div className = "form-group"><h5>User ID (until login available):</h5>
+                <div className = "form-group"><h5>User ID: (no ID? create account<a href="/Register"> here</a>)</h5>
                     <input type = "number" className = "form-control form-control-lg "
                         placeholder = "Unique user ID" name = "customerID" value = {this.state.customerID}  onChange = {this.onChange} />
                 </div>
@@ -53,7 +53,7 @@ class CreateBooking extends Component {
                 <div className = "form-group"><h5>Requested date & time:</h5>
                     <input type = "date" className = "form-control form-control-lg "
                         placeholder = "Requested booking date" name = "date" value = {this.state.date} onChange = {this.onChange}/>
-                    <input type = "time" className = "form-control form-control-lg "
+                        <input type = "time" className = "form-control form-control-lg "
                         placeholder = "Requested booking time" name = "time" value = {this.state.time} onChange = {this.onChange}/>
                 </div><br/>
                 <input type = "submit" className = "btn btn-primary btn-block mt-4"></input>
