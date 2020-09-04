@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {userLogin} from "../actions/LoginActions";
 
 class Login extends Component {
     constructor() {
@@ -6,7 +7,8 @@ class Login extends Component {
 
         this.state = {
             username: "",
-            password: ""
+            password: "",
+            errorMessage: ""
         };
 
         this.onChange = this.onChange.bind(this);
@@ -19,7 +21,13 @@ class Login extends Component {
 
     onSubmit(event){
         event.preventDefault();
-        alert("SUBMITTING");
+        const user = {
+            "username":this.state.username,
+            "password":this.state.password,
+            "userType":"Customer"
+        }
+        console.log(user);
+        userLogin(user);
     }
 
   render() {
@@ -27,7 +35,7 @@ class Login extends Component {
       <div>
           <a className="navbar-link" href="/register">Register</a>
           <h1>Login Page</h1>
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.onSubmit}>
               <br></br>
               <input class="input" name="username"
                      placeholder="Username"
