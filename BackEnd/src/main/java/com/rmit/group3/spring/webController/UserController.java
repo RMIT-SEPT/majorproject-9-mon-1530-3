@@ -1,9 +1,11 @@
 package com.rmit.group3.spring.webController;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.rmit.group3.spring.model.Booking;
 import com.rmit.group3.spring.model.User;
 import com.rmit.group3.spring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -15,6 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
@@ -31,7 +34,13 @@ public class UserController {
             }
 
         }
+
         boolean loginUser = userService.login(user);
+
+        /*HttpHeaders headers = new HttpHeaders();
+        headers.add("Access-Control-Allow-Origin", "http://localhost:3000");
+        headers.add("Access-Control-Allow-Credentials", "true");*/
+
         return new ResponseEntity<>(loginUser, HttpStatus.ACCEPTED);
     }
 
