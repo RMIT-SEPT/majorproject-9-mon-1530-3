@@ -13,16 +13,12 @@ public class UserService{
 
     public User saveOrUpdateUser(User user) { return userRepository.save(user);}
 
-    public User login(User user){
-        String username = user.getUserID();
+    public boolean login(User user){
+        String username = user.getUsername();
         String password = user.getPassword();
-        System.out.println(username + "!!!!" + password);
-        Boolean loginUser = userRepository.existsByUsernameAndPassword(username, password);
+        // System.out.println(username + "!!!!" + password);
+        boolean loginUser = userRepository.existsByUsernameAndPassword(username, password);
 
-        if (!loginUser){
-            throw new UserException("Error: User Doesn't Exist");
-        }
-
-        return user;
+        return loginUser;
     }
 }

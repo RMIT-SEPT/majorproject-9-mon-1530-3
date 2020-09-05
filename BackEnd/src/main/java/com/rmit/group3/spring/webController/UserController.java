@@ -31,8 +31,8 @@ public class UserController {
             }
 
         }
-        User loginUser = userService.login(user);
-        return new ResponseEntity<>(loginUser, HttpStatus.CREATED);
+        boolean loginUser = userService.login(user);
+        return new ResponseEntity<>(loginUser, HttpStatus.ACCEPTED);
     }
 
 

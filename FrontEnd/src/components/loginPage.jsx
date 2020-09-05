@@ -26,8 +26,8 @@ class Login extends Component {
             "password":this.state.password,
             "userType":"Customer"
         }
-        console.log(user);
-        userLogin(user);
+        console.log(user)
+        console.log(userLogin(user));
     }
 
   render() {
