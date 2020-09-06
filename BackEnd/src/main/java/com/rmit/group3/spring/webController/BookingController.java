@@ -35,7 +35,7 @@ public class BookingController {
 
         }
         Booking booking1 = bookingService.saveOrUpdateBooking(booking);
-        return new ResponseEntity<>(booking1, HttpStatus.CREATED);
+        return new ResponseEntity<>(booking1.getBookingID(), HttpStatus.CREATED);
     }
 
     @GetMapping("/{bookingID}")

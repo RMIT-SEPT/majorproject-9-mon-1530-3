@@ -3,11 +3,15 @@ import { GET_ERRORS } from "./types";
 
 
 
-export function createBooking(booking) {
+export async function createBooking(booking) {
 
 
     try{
-        axios.post("http://localhost:8080/api/booking", booking);
+        return await axios.post("http://localhost:8080/api/booking", booking)
+            .then(async function(response) {
+                return response.data
+            })
+            .catch(error => {return error})
     }
     catch(err){
         return {
@@ -18,10 +22,14 @@ export function createBooking(booking) {
     }
 };
 
-export function deleteBooking(booking) {
+export async function deleteBooking(booking) {
 
     try{
-        axios.delete("http://localhost:8080/api/booking",booking);
+        return await axios.delete("http://localhost:8080/api/booking",booking)
+            .then(async function(response){
+                return response.data
+            })
+            .catch(error => {return error})
     }
     catch(err){
         return {

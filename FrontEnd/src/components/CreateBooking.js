@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import ReactDOM from "react-dom";
 import {createBooking} from '../actions/bookingActions';
 
 class CreateBooking extends Component {
@@ -13,14 +14,14 @@ class CreateBooking extends Component {
             "confirmed":""
         };
         this.onChange = this.onChange.bind(this);
-        this.onSubmit = this.onSubmit.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);;
 
     }
     onChange(e){
         this.setState({[e.target.name]: e.target.value});
     }
 
-    onSubmit(e){
+    async onSubmit(e){
 
         e.preventDefault();
 
@@ -32,13 +33,32 @@ class CreateBooking extends Component {
         "confirmed":false
     }
         console.log(newBooking);
-        createBooking(newBooking);
+
+        let booking = await createBooking(newBooking)
+
+        if(booking){
+            console.log(booking.bookingID);
+            ReactDOM.render(<div>
+                <h2 className="header">Thank you,<br/>your booking number is:</h2>
+                <br/><b>{booking.bookingID}</b><br/>
+                <a className = "button" href = "/index">return home</a>
+                </div>,document.getElementById('booking'))
+        }
+        else{
+            console.log("error");
+            ReactDOM.render(<div>
+                <h2 className="header">Booking failed,<br/>please try again;</h2>
+                <br/><br/>
+                <a className = "button" href = "/CreateBooking">reset</a>
+                </div>,document.getElementById('booking'))
+        }
 
 
     }
     render() {
         return (
             <div>
+            <div id = 'booking'> 
                 <h4>Create Booking:</h4>
                 <div className = "form">
                 <form onSubmit={this.onSubmit}>
@@ -58,6 +78,7 @@ class CreateBooking extends Component {
                 </div><br/>
                 <input type = "submit" className = "btn btn-primary btn-block mt-4"></input>
                 </form>
+                </div>
                 </div>
             </div>
         )
