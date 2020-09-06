@@ -1,12 +1,12 @@
 import axios from "axios";
 import { GET_ERRORS } from "./types";
 
-export function userLogin(user) {
+export async function userLogin(user) {
     try{
-
-        axios.defaults.withCredentials = false;
-        axios.post("http://localhost:8080/api/user/login", user)
-            .then(response => {return response})
+        return await axios.post("http://localhost:8080/api/user/login", user)
+            .then(async function (response) {
+                return response.data
+            })
             .catch(error => {return error})
     } catch (err){
         return{

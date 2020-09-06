@@ -19,7 +19,7 @@ class Login extends Component {
         this.setState({[event.target.name]: event.target.value});
     }
 
-    onSubmit(event){
+    async onSubmit(event){
         event.preventDefault();
         const user = {
             "username":this.state.username,
@@ -27,7 +27,13 @@ class Login extends Component {
             "userType":"Customer"
         }
         console.log(user)
-        console.log(userLogin(user));
+        let valid = await userLogin(user)
+
+        if (valid){
+            console.log("User Found :)")
+        } else{
+            console.log("User Not Found!")
+        }
     }
 
   render() {
