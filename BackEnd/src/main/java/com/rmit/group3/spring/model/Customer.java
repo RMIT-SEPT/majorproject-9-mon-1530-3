@@ -1,6 +1,10 @@
 package com.rmit.group3.spring.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 import java.util.Date;
 
 @Entity
@@ -9,11 +13,17 @@ public class Customer {
     @Id
     private Long customerID;
 
+    @Email
     private String email;
+
+    @NotBlank(message = "First name required")
     private String firstName;
+    @NotBlank(message = "Last name required")
     private String lastName;
 
+    @JsonFormat(pattern = "dd-mm-yyyy")
     private Date created_At;
+    @JsonFormat(pattern = "dd-mm-yyyy")
     private Date updated_At;
 
     public Customer() {

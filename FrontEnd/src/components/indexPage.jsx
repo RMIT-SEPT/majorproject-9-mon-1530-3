@@ -5,9 +5,8 @@ class Index extends Component {
   render() {
     return (
       <div>
-        <h1>Index Page</h1>
+        <h1>Index</h1>
         <br></br>
-        <h6>This index page has not been implemented</h6>
       </div>
     );
   }
