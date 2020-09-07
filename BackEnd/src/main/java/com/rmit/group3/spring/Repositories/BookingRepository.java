@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface BookingRepository extends CrudRepository<Booking, Long> {
 
-    Booking findByBookingID(String bookingID);
+    Booking findByBookingID(Long bookingID);
     @Override
     Iterable<Booking> findAll();
 

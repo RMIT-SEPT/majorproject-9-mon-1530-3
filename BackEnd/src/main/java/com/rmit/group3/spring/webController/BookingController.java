@@ -38,18 +38,19 @@ public class BookingController {
         return new ResponseEntity<>(booking1.getBookingID(), HttpStatus.CREATED);
     }
 
-    @GetMapping("/{bookingID}")
-    public ResponseEntity<?> getBookingByID(@PathVariable String bookingID)
+    @GetMapping("/get")
+    public ResponseEntity<?> getBookingByID(@Valid @RequestBody Booking booking)
     {
-        Booking booking = bookingService.findBookingByID(bookingID);
-        return new ResponseEntity<Booking>(booking, HttpStatus.OK);
+        Booking booking1 = bookingService.findBookingByID(booking.getBookingID());
+        return new ResponseEntity<Booking>(booking1, HttpStatus.OK);
     }
 
-    @DeleteMapping("/{bookingID}")
-    public ResponseEntity<?> deleteBooking(@PathVariable String bookingID)
+    @PostMapping("/delete")
+    public ResponseEntity<?> deleteBooking(@Valid @RequestBody Booking booking)
     {
-        bookingService.deleteBookingByID(bookingID);
-        return new ResponseEntity<String>("Booking with ID:" + bookingID + " was deleted", HttpStatus.OK);
+        System.out.println((booking.getBookingID()));
+        boolean deleted = bookingService.deleteBookingByID(booking.getBookingID());
+        return new ResponseEntity<>(deleted, HttpStatus.ACCEPTED);
     }
 
     @GetMapping("/all")

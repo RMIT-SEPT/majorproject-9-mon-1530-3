@@ -1,6 +1,7 @@
 
 
 import React, { Component } from 'react'
+import ReactDOM from "react-dom";
 import { deleteBooking } from '../actions/bookingActions';
 
 class EditOrDeleteBooking extends Component {
@@ -21,7 +22,7 @@ class EditOrDeleteBooking extends Component {
         this.setState({[e.target.name]:e.target.value});
     }
 
-    onSubmit(e){
+    async onSubmit(e){
         e.preventDefault();
 
         const bookingID = {
@@ -29,12 +30,35 @@ class EditOrDeleteBooking extends Component {
         }
 
         console.log(bookingID)
-        deleteBooking(bookingID);
+        let deleted = await deleteBooking(bookingID);
+        
+        if(deleted)
+        {
+            console.log("deleted")
+           ReactDOM.render(<div>
+                <h2 className="header">Thank you,<br/>booking was successfully cancelled</h2>
+                <br/><b>{deleted}</b><br/>
+                <a className = "button" href = "/index">return home</a>
+                </div>,document.getElementById('booking'))
+                
+        }
+        else{
+            
+            console.log("error");
+            
+            ReactDOM.render(<div>
+                <h2 className="header">Delete booking failed,<br/>please try again;</h2>
+                <br/><br/>
+                <a className = "button" href = "/DeleteBooking">reset</a>
+                </div>,document.getElementById('booking'));
+                
+        
+        }
 
     }
     render() {
         return (
-            <div>
+            <div><div id = 'booking'>
             <h4>Edit or cancel booking:</h4>
             <div className = "form">
             <form onSubmit = {this.onSubmit}>
@@ -47,10 +71,10 @@ class EditOrDeleteBooking extends Component {
                 onChange = {this.onChange}/>
             </div><br/>
             <div>
-            <input type = "submit" value = "Cancel" className = "btn btn-primary btn-block mt-4"></input>
+            <input type = "submit" value = "Cancel booking" className = "btn btn-primary btn-block mt-4"></input>
             </div>
             </form>
-            </div>
+            </div></div>
                 
             </div>
         )

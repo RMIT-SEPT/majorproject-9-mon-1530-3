@@ -22,17 +22,18 @@ public class BookingService {
         }
     }
 
-    public void deleteBookingByID(String bookingID) {
+    public boolean deleteBookingByID(Long bookingID) {
         Booking booking = bookingRepository.findByBookingID(bookingID);
 
         if(booking == null) {
-            throw new BookingException("Cannot find booking with ID " + bookingID);
+            return false;
         }
 
         bookingRepository.delete(booking);
+        return true;
     }
 
-    public Booking findBookingByID(String bookingID)
+    public Booking findBookingByID(Long bookingID)
     {
         Booking booking = bookingRepository.findByBookingID(bookingID);
 

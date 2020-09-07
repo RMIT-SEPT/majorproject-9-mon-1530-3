@@ -25,7 +25,7 @@ export async function createBooking(booking) {
 export async function deleteBooking(booking) {
 
     try{
-        return await axios.delete("http://localhost:8080/api/booking",booking)
+        return await axios.post("http://localhost:8080/api/booking/delete",booking)
             .then(async function(response){
                 return response.data
             })
