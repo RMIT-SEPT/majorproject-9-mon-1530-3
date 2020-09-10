@@ -59,6 +59,9 @@ class CreateBooking extends Component {
         return (
             <div>
             <div id = 'booking'> 
+
+                <h4> <a href = "/CreateBooking_Service">Pick service (prototype) </a> </h4>
+
                 <h4>Create Booking:</h4>
                 <div className = "form">
                 <form onSubmit={this.onSubmit}>

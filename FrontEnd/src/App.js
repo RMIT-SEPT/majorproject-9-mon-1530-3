@@ -12,6 +12,7 @@ import Index from './components/indexPage';
 import CreateBooking from './components/CreateBooking';
 import Nav from './components/Layout/Nav';
 import EditOrDeleteBooking from './components/EditOrDeleteBooking';
+import CreateBooking_Service from './components/CreateBooking_Service';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
               <Route exact path="/register" component={Register}/>
               <Route exact path="/CreateBooking" component={CreateBooking}/>
               <Route exact path="/DeleteBooking" component={EditOrDeleteBooking}/>
+              <Route exact path="/CreateBooking_Service" component={CreateBooking_Service}/>
           </header>
           </div>
       </Router>
