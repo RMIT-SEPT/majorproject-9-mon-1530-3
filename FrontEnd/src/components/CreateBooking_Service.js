@@ -2,34 +2,57 @@ import React, { Component } from 'react'
 
 export default class CreateBooking_Service extends Component {
 
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
 
+        this.state = {staff: <option>No staff available..</option>};
         this.getServices = this.getServices.bind(this);
-
+        this.getStaff = this.getStaff.bind(this);
 
     }
 
     getServices() {
 
-        return ["service1","service2"];
+        var services = ["service1","service2"];
+
+
+        return services.map((service) => <option key = {service} value = {service}>{service}</option>);
 
     }
 
+    getStaff() {
 
+        var newStaff = ["No staff available.."];
+
+        if(document.getElementById('selectService').value === 'service1'){
+            newStaff = ['John','Not John'];
+        }
+        else if(document.getElementById('selectService').value === 'service2'){
+            newStaff = ['Phil'];
+        }
+
+        const newStaffMap = newStaff.map((currentStaff) => <option key = {currentStaff} value = {currentStaff}>{currentStaff}</option>)
+
+        this.setState({staff:newStaffMap});
+    }
 
     render() {
 
-
-        const services = this.getServices().map((service) =>
-
-            <option value = "{service}">{service}</option>
-        );
         return (
-            <div id = 'selectService'>
+            <div>
             <h3>Select service:</h3>
-            <form>
-                <select style={{color:'black'}}>{services}</select>
+            <form onSubmit={this.onSubmit}>
+                <select id='selectService' onChange={this.getStaff} defaultValue='Please select..' style={{color:'black',fontSize:'small'}} > 
+                <option>please select..</option>    
+                {this.getServices()} 
+                </select>
+                <br/>
+                <select style={{color:'black',fontSize:'small'}}>
+                    {this.state.staff}
+                </select>
+                <br/>
+                <br/>
+               <input className = "btn btn-primary btn-block mt-4" type = "submit"></input>
             </form>
 
             </div>
