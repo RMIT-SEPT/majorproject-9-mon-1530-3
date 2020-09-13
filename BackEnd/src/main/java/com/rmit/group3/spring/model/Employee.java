@@ -1,6 +1,7 @@
 package com.rmit.group3.spring.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -12,12 +13,16 @@ public class Employee {
 
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GenericGenerator(name = "native", strategy = "native")
     private Long employeeID;
 
     @NotBlank(message = "First name required")
     private String firstName;
     @NotBlank(message = "Last name required")
     private String lastName;
+    @NotBlank(message = "service detail required")
+    private String service;
 
     @Email
     private String email;
@@ -26,6 +31,14 @@ public class Employee {
     private Date created_At;
     @JsonFormat(pattern = "dd-mm-yyyy")
     private Date updated_At;
+
+    public String getService() {
+        return service;
+    }
+
+    public void setService(String service) {
+        this.service = service;
+    }
 
     public Date getCreated_At() {
         return created_At;

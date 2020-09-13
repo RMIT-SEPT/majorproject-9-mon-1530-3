@@ -1,42 +1,63 @@
 import React, { Component } from 'react'
+import {getAllStaff} from '../actions/bookingActions';
 
 export default class CreateBooking_Service extends Component {
 
-    constructor(props){
-        super(props);
+    constructor(){
+        super();
 
-        this.state = {staff: <option>No staff available..</option>};
+        this.state = {
+            services:[""],
+            AllStaffDetails:[""],
+            staff: [<option>please first select a service..</option>]
+            
+        };
         this.getServices = this.getServices.bind(this);
         this.getStaff = this.getStaff.bind(this);
 
+        this.getServices();
+
     }
 
-    getServices() {
+    async getServices() {
 
-        var services = ["service1","service2"];
+        let allStaff = await getAllStaff();
+        let newServices = ["No available services.."];
+        let newStaff = ["No available staff.."];
 
+        for(var i = 0; i < allStaff.length; i++){
 
-        return services.map((service) => <option key = {service} value = {service}>{service}</option>);
+            newStaff.push(allStaff[i].firstName + " " + allStaff[i].lastName);
+
+            if(!newServices.includes(allStaff[i].service)){
+                newServices.push(allStaff[i].service)
+            }
+        }
+        if(newServices.length > 1){
+            newServices.shift();
+        }
+        this.setState({services:newServices, staff:newStaff, AllStaffDetails:allStaff});
 
     }
 
     getStaff() {
 
-        var newStaff = ["No staff available.."];
+        if(document.getElementById('selectService').value !== "please select.."){
 
-        if(document.getElementById('selectService').value === 'service1'){
-            newStaff = ['John','Not John'];
-        }
-        else if(document.getElementById('selectService').value === 'service2'){
-            newStaff = ['Phil'];
-        }
-
+        var newStaff = this.state.staff;
+        newStaff.shift();
         const newStaffMap = newStaff.map((currentStaff) => <option key = {currentStaff} value = {currentStaff}>{currentStaff}</option>)
 
         this.setState({staff:newStaffMap});
+        }
+        else{
+            this.setState({staff:[<option>please first select a service..</option>]});
+        }
+
     }
 
     render() {
+        var allServicesElement = this.state.services.map((service) => <option key = {service} value = {service}>{service}</option>)
 
         return (
             <div>
@@ -44,7 +65,7 @@ export default class CreateBooking_Service extends Component {
             <form onSubmit={this.onSubmit}>
                 <select id='selectService' onChange={this.getStaff} defaultValue='Please select..' style={{color:'black',fontSize:'small'}} > 
                 <option>please select..</option>    
-                {this.getServices()} 
+                {allServicesElement} 
                 </select>
                 <br/>
                 <select style={{color:'black',fontSize:'small'}}>

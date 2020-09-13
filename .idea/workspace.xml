@@ -20,12 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57280a33-6cac-4ca6-8464-e1b884fcf9b4" name="Default Changelist" comment="Fixed CORS error">
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/exceptions/EmployeeException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/Repositories/BookingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/Repositories/BookingRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/service/BookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/Repositories/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/Repositories/EmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/service/EmployeeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/webController/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/webController/BookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/webController/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/webController/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/resources/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/src/actions/bookingActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/actions/bookingActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/components/EditOrDeleteBooking.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/components/EditOrDeleteBooking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/components/CreateBooking_Service.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/components/CreateBooking_Service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +43,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -97,17 +101,6 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RunManager" selected="Spring Boot.Application">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="generated-requests#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -167,6 +160,8 @@
       <workItem from="1599023835237" duration="2637000" />
       <workItem from="1599432408062" duration="40000" />
       <workItem from="1599432659838" duration="2772000" />
+      <workItem from="1599958346697" duration="688000" />
+      <workItem from="1599959747536" duration="719000" />
     </task>
     <task id="LOCAL-00001" summary="corrected and renamed to group3">
       <created>1596437743075</created>
@@ -259,11 +254,11 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="880" y="385" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1596856381724" />
-    <state x="1093" y="443" key="#com.intellij.ide.util.MemberChooser" timestamp="1598832355932">
+    <state x="1093" y="443" key="#com.intellij.ide.util.MemberChooser" timestamp="1599959467576">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="765" y="345" key="#com.intellij.ide.util.MemberChooser/0.0.1792.1120@0.0.1792.1120" timestamp="1598785562471" />
-    <state x="1093" y="443" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1598832355932" />
+    <state x="1093" y="443" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1599959467576" />
     <state x="997" y="408" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597026999059">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
@@ -401,11 +396,12 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="936" y="240" key="run.anything.popup/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1599203615170" />
-    <state x="303" y="242" width="672" height="678" key="search.everywhere.popup" timestamp="1599302120600">
-      <screen x="0" y="0" width="2560" height="1040" />
+    <state x="303" y="335" width="672" height="939" key="search.everywhere.popup" timestamp="1599960179976">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="212" y="261" width="670" height="731" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1598785319346" />
     <state x="303" y="242" width="672" height="678" key="search.everywhere.popup/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1599097258570" />
+    <state x="303" y="335" width="672" height="939" key="search.everywhere.popup/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1599960179976" />
     <state x="303" y="242" width="672" height="678" key="search.everywhere.popup/313.-1080.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599302120600" />
   </component>
 </project>

@@ -48,7 +48,7 @@ public class BookingController {
     @PostMapping("/delete")
     public ResponseEntity<?> deleteBooking(@Valid @RequestBody Booking booking)
     {
-        System.out.println((booking.getBookingID()));
+        System.out.println((booking.getBookingID()) +" deleted.");
         boolean deleted = bookingService.deleteBookingByID(booking.getBookingID());
         return new ResponseEntity<>(deleted, HttpStatus.ACCEPTED);
     }
