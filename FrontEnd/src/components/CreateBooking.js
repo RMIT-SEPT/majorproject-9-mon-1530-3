@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 import {createBooking} from '../actions/bookingActions';
 
-class CreateBooking extends Component {
-    constructor(){
-        super();
+export class CreateBooking extends Component {
+    constructor(props){
+        super(props);
 
         this.state = {
             "customerID":"",
-            "employeeID":"",
+            "employeeID":this.props.employeeID,
             "date":"",
             "time":"",
             "confirmed":""
@@ -34,13 +34,18 @@ class CreateBooking extends Component {
     }
         console.log(newBooking);
 
-        let booking = await createBooking(newBooking)
+        let bookingID = await createBooking(newBooking)
 
-        if(booking){
-            console.log(booking.bookingID);
+        if(bookingID){
+            console.log(bookingID);
             ReactDOM.render(<div>
                 <h2 className="header">Thank you,<br/>your booking number is:</h2>
-                <br/><b>{booking.bookingID}</b><br/>
+                <br/><b>{bookingID}</b><br/>
+                <br/>
+                date: {newBooking.date}
+                <br/>
+                time: {newBooking.time}
+                <br/>
                 <a className = "button" href = "/index">return home</a>
                 </div>,document.getElementById('booking'))
         }
@@ -60,7 +65,7 @@ class CreateBooking extends Component {
             <div>
             <div id = 'booking'> 
 
-                <h4> <a href = "/CreateBooking_Service">Pick service (prototype) </a> </h4>
+                <h4> <a href = "/CreateBooking_Service">back to pick service</a> </h4>
 
                 <h4>Create Booking:</h4>
                 <div className = "form">
@@ -68,10 +73,6 @@ class CreateBooking extends Component {
                 <div className = "form-group"><h5>User ID: (no ID? create account<a href="/Register"> here</a>)</h5>
                     <input type = "number" className = "form-control form-control-lg "
                         placeholder = "Unique user ID" name = "customerID" value = {this.state.customerID}  onChange = {this.onChange} />
-                </div>
-                <div className = "form-group"><h5>Employee ID:</h5>
-                    <input type = "number" className = "form-control form-control-lg "
-                        placeholder = "Unique employee ID" name = "employeeID" value = {this.state.employeeID} onChange = {this.onChange}/>
                 </div>
                 <div className = "form-group"><h5>Requested date & time:</h5>
                     <input type = "date" className = "form-control form-control-lg "

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import ReactDOM from "react-dom";
 import {getAllStaff} from '../actions/bookingActions';
-
+import {CreateBooking} from './CreateBooking';
 export default class CreateBooking_Service extends Component {
 
     constructor(){
@@ -21,17 +22,15 @@ export default class CreateBooking_Service extends Component {
 
     onSubmit(e){
         e.preventDefault();
-        if(document.getElementById('staffSelect').value === ""){
-            console.log("no selection made")
+        var employee = document.getElementById('staffSelect').value
+        if(employee !== ""){
+            var id = employee.substr(0,employee.indexOf(':'));
+            ReactDOM.render(<CreateBooking employeeID = {id}/>,document.getElementById('booking'));
         }
         else{
+            console.log("no selection made")
+           
 
-            var id = document.getElementById('staffSelect').value;
-
-        const newBooking = {
-            "employeeID":id.substr(0,id.indexOf(':'))
-        };
-        console.log(newBooking);
     }
     }
 
@@ -84,7 +83,7 @@ export default class CreateBooking_Service extends Component {
         var allServicesElement = this.state.services.map((service) => <option key = {service} value = {service}>{service}</option>)
 
         return (
-            <div>
+            <div id = 'booking'>
             <h3>Select service:</h3>
             <form onSubmit={this.onSubmit}>
                 <select id='selectService' onChange={this.getStaff} defaultValue='Please select..' style={{color:'black',fontSize:'small'}} > 
