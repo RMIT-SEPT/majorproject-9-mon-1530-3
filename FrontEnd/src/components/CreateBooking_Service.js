@@ -10,13 +10,29 @@ export default class CreateBooking_Service extends Component {
             services:[""],
             AllStaffDetails:[""],
             staff: [<option>please first select a service..</option>]
-            
         };
         this.getServices = this.getServices.bind(this);
         this.getStaff = this.getStaff.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
 
         this.getServices();
 
+    }
+
+    onSubmit(e){
+        e.preventDefault();
+        if(document.getElementById('staffSelect').value === ""){
+            console.log("no selection made")
+        }
+        else{
+
+            var id = document.getElementById('staffSelect').value;
+
+        const newBooking = {
+            "employeeID":id.substr(0,id.indexOf(':'))
+        };
+        console.log(newBooking);
+    }
     }
 
     async getServices() {
@@ -42,13 +58,21 @@ export default class CreateBooking_Service extends Component {
 
     getStaff() {
 
-        if(document.getElementById('selectService').value !== "please select.."){
+        var currentService = document.getElementById('selectService').value;
 
-        var newStaff = this.state.staff;
-        newStaff.shift();
-        const newStaffMap = newStaff.map((currentStaff) => <option key = {currentStaff} value = {currentStaff}>{currentStaff}</option>)
+        if(currentService !== "please select.."){
 
-        this.setState({staff:newStaffMap});
+            var newStaff = [];
+
+            for(var i = 0; i < this.state.AllStaffDetails.length; i++){
+                var currentStaff = this.state.AllStaffDetails[i];
+                if(currentStaff.service === currentService){
+                    newStaff.push((currentStaff.employeeID + ": " + currentStaff.firstName + " " + currentStaff.lastName))
+                }
+            }
+            const newStaffMap = newStaff.map((staffMember) => <option key = {staffMember} value = {staffMember}>{staffMember}</option>)
+
+            this.setState({staff:newStaffMap});
         }
         else{
             this.setState({staff:[<option>please first select a service..</option>]});
@@ -68,7 +92,7 @@ export default class CreateBooking_Service extends Component {
                 {allServicesElement} 
                 </select>
                 <br/>
-                <select style={{color:'black',fontSize:'small'}}>
+                <select id ='staffSelect' style={{color:'black',fontSize:'small'}} defaultValue="">
                     {this.state.staff}
                 </select>
                 <br/>
