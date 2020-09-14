@@ -4,6 +4,7 @@ import {userLogin} from "../actions/LoginActions";
 class Login extends Component {
     constructor() {
         super();
+        sessionStorage.setItem('username', "NULL");
 
         this.state = {
             username: "",
@@ -30,7 +31,8 @@ class Login extends Component {
         let valid = await userLogin(user)
 
         if (valid){
-            console.log("User Found :)")
+            sessionStorage.setItem('username', this.state.username);
+            console.log(sessionStorage.getItem('username'));
         } else{
             console.log("User Not Found!")
         }
