@@ -6,6 +6,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import java.sql.Time;
 import java.util.Date;
 
 @Entity
@@ -23,6 +24,29 @@ public class Employee {
     private String lastName;
     @NotBlank(message = "service detail required")
     private String service;
+
+
+    @NotBlank(message = "need start time")
+    private Time startTime;
+
+    @NotBlank(message = "need finish time")
+    private Time endTime;
+
+    public Date getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(Time endTime) {
+        this.endTime = endTime;
+    }
+
+    public Date getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(Time startTime) {
+        this.startTime = startTime;
+    }
 
     @Email
     private String email;

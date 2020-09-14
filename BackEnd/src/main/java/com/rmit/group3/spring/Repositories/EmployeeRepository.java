@@ -8,5 +8,4 @@ public interface EmployeeRepository extends CrudRepository<Employee,Long>{
     Employee findByEmployeeID(Long employeeID);
     @Override
     Iterable<Employee> findAll();
-
 }

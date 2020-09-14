@@ -14,7 +14,11 @@ export class CreateBooking extends Component {
             "confirmed":""
         };
         this.onChange = this.onChange.bind(this);
-        this.onSubmit = this.onSubmit.bind(this);;
+        this.onSubmit = this.onSubmit.bind(this);
+
+        console.log(this.props.employeeID)
+        console.log(this.props.startTime)
+        console.log(this.props.endTime)
 
     }
     onChange(e){
@@ -77,7 +81,7 @@ export class CreateBooking extends Component {
                 <div className = "form-group"><h5>Requested date & time:</h5>
                     <input type = "date" className = "form-control form-control-lg "
                         placeholder = "Requested booking date" name = "date" value = {this.state.date} onChange = {this.onChange}/>
-                        <input type = "time" className = "form-control form-control-lg "
+                        <input type = "time" className = "form-control form-control-lg " min = {this.props.startTime} max = {this.props.endTime}
                         placeholder = "Requested booking time" name = "time" value = {this.state.time} onChange = {this.onChange}/>
                 </div><br/>
                 <input type = "submit" className = "btn btn-primary btn-block mt-4"></input>

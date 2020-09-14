@@ -6,6 +6,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.sql.Time;
 import java.util.Date;
 
 @Entity
@@ -26,7 +27,7 @@ public class Booking {
     private Date date;
 
     @JsonFormat(pattern = "HH:mm")
-    private Date time;
+    private Time time;
 
     private boolean confirmed;
 
@@ -36,12 +37,12 @@ public class Booking {
     @JsonFormat(pattern = "yyyy-mm-dd")
     private Date updated_At;
 
-    public Date getTime() {
+    public Time getTime() {
         return time;
     }
 
     public void setTime(Date time) {
-        this.time = time;
+        this.time = new Time(time.getTime());
     }
 
     public boolean isConfirmed() {

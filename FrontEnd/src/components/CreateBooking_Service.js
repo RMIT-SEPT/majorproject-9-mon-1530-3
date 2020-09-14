@@ -25,10 +25,21 @@ export default class CreateBooking_Service extends Component {
         var employee = document.getElementById('staffSelect').value
         if(employee !== ""){
             var id = employee.substr(0,employee.indexOf(':'));
-            ReactDOM.render(<CreateBooking employeeID = {id}/>,document.getElementById('booking'));
+            var startTime = '06:00:00';
+            var endTime = '23:00:00';
+            for(var i = 0; i < this.state.AllStaffDetails.length; i++)
+            {
+                if(this.state.AllStaffDetails[i].employeeID === parseInt(id)){
+                    startTime = this.state.AllStaffDetails[i].startTime;
+                    endTime = this.state.AllStaffDetails[i].endTime;
+                }
+            }
+
+            ReactDOM.render(<CreateBooking employeeID = {id} startTime = {startTime} endTime = {endTime}/>,document.getElementById('booking'));
+
         }
         else{
-            console.log("no selection made")
+            alert("no selection made");
            
 
     }
