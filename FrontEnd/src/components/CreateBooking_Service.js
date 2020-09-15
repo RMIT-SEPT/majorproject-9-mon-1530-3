@@ -92,17 +92,17 @@ export default class CreateBooking_Service extends Component {
 
     render() {
         var allServicesElement = this.state.services.map((service) => <option key = {service} value = {service}>{service}</option>)
-
+        const formStyle = {color:'black', fontSize:'small',width:'100%'};
         return (
             <div id = 'booking'>
             <h3>Select service:</h3>
             <form onSubmit={this.onSubmit}>
-                <select id='selectService' onChange={this.getStaff} defaultValue='Please select..' style={{color:'black',fontSize:'small'}} > 
-                <option>please select..</option>    
+                <select id='selectService' onChange={this.getStaff} defaultValue='Please select..' style={formStyle} > 
+                <option style={formStyle}>please select..</option>    
                 {allServicesElement} 
                 </select>
                 <br/>
-                <select id ='staffSelect' style={{color:'black',fontSize:'small'}} defaultValue="">
+                <select id ='staffSelect' style={formStyle} defaultValue="">
                     {this.state.staff}
                 </select>
                 <br/>
