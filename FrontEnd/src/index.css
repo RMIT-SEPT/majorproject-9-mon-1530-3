@@ -4,6 +4,7 @@ ALL DIVS
 
 #content {
   display: flex;
+  align-items: center;
 }
 
 /**
@@ -11,6 +12,7 @@ LOGO
 **/
 
 #logo {
+  height: 100%;
   margin-right: 100px;
 }
 
