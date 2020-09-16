@@ -1,28 +1,38 @@
 import React, { Component } from "react";
+import logo from '../images/logo.png'
+
 
 class Register extends Component {
   state = {};
   render() {
     return (
-      <div>
-          <a className="navbar-link" href="/login">Login</a>
-        <h1>CREATE A NEW ACCOUNT</h1>
+      <div id="content">
+      <div id="logo"><img src={logo} alt="logo that says the text booqing"></img></div>
+      
+      <div className="signs">
+      <form>
+        <input className="input" name="username"
+           placeholder="username." required
+        />
+          <br></br>
+        <input className="input" name="password"
+           placeholder="password." type="password" required
+        />
         <br></br>
-        <h5>First name</h5>
-        <input class="input" />
-        <h5>Last name</h5>
-        <input class="input"/>
-        <h5>Email address</h5>
-        <input class="input"/>
-        <h5>Username</h5>
-        <input class="input"/>
-        <h5>Password</h5>
-        <input class="input"type="password" />
-        <h5>Country</h5>
-        <input />
+        <input className="input" name="email"
+           placeholder="email." type="email"
+        />
         <br></br>
+        <input className="input" name="phone"
+           placeholder="phone." type="tel"
+        />
         <br></br>
-        <button className="btn btn-primary btn-sm">Create Account</button>
+        <input className="login" type="submit" value="register." onClick={this.submit}/>
+        </form>
+        <a href="/index">sign in instead?</a>
+
+      </div>
+
       </div>
     );
   }

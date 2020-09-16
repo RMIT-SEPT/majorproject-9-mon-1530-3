@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {userLogin} from "../actions/LoginActions";
+import logo from '../images/logo.png'
 
 class Index extends Component {
   state = {};
@@ -14,26 +14,10 @@ class Index extends Component {
     };
 
     this.state = {isToggleOn: true};
-
-    // this.onChange = this.onChange.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
   }
 
-  toggle(event) {
-    var signin = document.getElementById("signinBox");
-    var signup = document.getElementById("signupBox");
-
-    if(signin.style.display === "block") {
-      signup.style.display = "none";
-      signin.style.display = "block";
-    } else if (signup.style.display === "block") {
-      signin.style.display = "none";
-      signup.style.display = "block";
-    }
-    
-  }
-
-  async onSubmit(event){
+  //SUBMIT EVENT
+  submit(event){
         event.preventDefault();
         const user = {
             "username":this.state.username,
@@ -41,13 +25,6 @@ class Index extends Component {
             "userType":"Customer"
         }
         console.log(user)
-        let valid = await userLogin(user)
-
-        if (valid){
-            console.log("User Found :)")
-        } else{
-            console.log("User Not Found!")
-        }
     }
 
 
@@ -55,30 +32,25 @@ class Index extends Component {
   render() {
     return (
       
-      <div>
-      <div className="signs" id="signinBox">
-        <form onSubmit={this.onSubmit}>
+      <div id="content">
+      <div id="logo"><img src={logo} alt="logo that says the text booqing"></img></div>
+      
+      <div className="signs">
+        <form>
         <input className="input" name="username"
-           placeholder="username"
-           value={this.state.username}
-           onChange={this.onChange}
+           placeholder="username."
         />
           <br></br>
         <input className="input" name="password"
-           placeholder="password"
-            type="password"
-            value={this.state.password}
-            onChange={this.onChange}
+           placeholder="password." type="password"
         />
         <br></br>
-        <input className="login" type="submit" value="login." onSubmit={this.onSubmit}/>
-        <button id="signupButton" onClick={this.toggle}>sign up instead?</button>
+        <input className="login" type="submit" value="login." onClick={this.submit}/>
         </form>
+        <a href="/register">sign up instead?</a>
+        
       </div>
 
-      <div className="signs" id="signupBox">
-        <p>fat</p>
-      </div>
       </div>
 
     );
