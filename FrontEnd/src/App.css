@@ -2,10 +2,6 @@
   text-align: center;
 }
 
-.nav-link{
-  padding-left: 10px;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -18,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #1B1B1D;;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
