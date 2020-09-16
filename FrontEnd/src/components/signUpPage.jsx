@@ -6,7 +6,7 @@ class Register extends Component {
   state = {};
   render() {
     return (
-      <div id="content">
+      <div id="signContent">
       <div id="logo"><img src={logo} alt="logo that says the text booqing"></img></div>
       
       <div className="signs">

@@ -36,6 +36,37 @@
     transform: rotate(360deg);
   }
 }
-.input {
-  color: black;
+
+/**
+NAV CSS EDITS 
+**/
+
+nav {
+  padding-top: 10px;
+  background-color: #1B1B1D;
+  color: white;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 15px;
+}
+
+nav #navibar {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  padding-right: 50px;
+  font-family: 'Avenir Next';
+  font-size: 42px;
+  color: white;
+}
+
+nav a:hover {
+  color: #66C7F4;
+}
+
+nav img {
+  height: 60px;
 }

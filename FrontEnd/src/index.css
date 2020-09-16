@@ -1,8 +1,8 @@
 /**
-ALL DIVS
+SIGNUP/SIGNIN DIVS
 **/
 
-#content {
+#signContent {
   display: flex;
   align-items: center;
 }
@@ -49,28 +49,17 @@ SIGNIN BOX/SIGNUP BOX
 }
 
 /**
-NAV CSS EDITS 
+ABOUT US PAGE
 **/
 
-nav {
-  padding-top: 10px;
-  background-color: #1B1B1D;
-  color: white;
-  align-self: center;
-}
-
-.navLinks {
-  display: flex;
-  justify-content: center;
-}
-
-nav a {
-  padding-right: 50px;
+.aboutContent {
+  width: 700px;
+  align-items: center;
   font-family: 'Avenir Next';
-  font-size: 42px;
-  color: white;
+  text-align: justify;
 }
 
-nav a:hover {
-  color: #66C7F4;
+.aboutContent h1 {
+  font-size: 50px;
 }
+

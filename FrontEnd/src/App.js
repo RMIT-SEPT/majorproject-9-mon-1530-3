@@ -12,6 +12,7 @@ import Index from './components/indexPage';
 import CreateBooking from './components/CreateBooking';
 import Nav from './components/Layout/Nav';
 import EditOrDeleteBooking from './components/EditOrDeleteBooking';
+import About from './components/aboutUs';
 
 function App() {
   return (
@@ -23,8 +24,9 @@ function App() {
               <Route exact path="/index" component={Index}/>
               <Route exact path="/login" component={Login}/>
               <Route exact path="/register" component={Register}/>
-              <Route exact path="/CreateBooking" component={CreateBooking}/>
-              <Route exact path="/DeleteBooking" component={EditOrDeleteBooking}/>
+              <Route exact path="/about" component={About}/>
+              <Route exact path="/book" component={CreateBooking}/>
+              <Route exact path="/cancel" component={EditOrDeleteBooking}/>
           </header>
           </div>
       </Router>
