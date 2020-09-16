@@ -10,4 +10,6 @@ public interface UserRepository extends CrudRepository<User,Long> {
     Iterable<User> findAllById(Iterable<Long> iterable);
 
     Boolean existsByUsernameAndPassword(@Param("username") String username, @Param("password") String password);
+
+    Boolean existsByUsername(@Param("username") String username);
 }

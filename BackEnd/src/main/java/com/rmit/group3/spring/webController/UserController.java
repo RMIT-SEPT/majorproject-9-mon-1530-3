@@ -37,10 +37,6 @@ public class UserController {
 
         boolean loginUser = userService.login(user);
 
-        /*HttpHeaders headers = new HttpHeaders();
-        headers.add("Access-Control-Allow-Origin", "http://localhost:3000");
-        headers.add("Access-Control-Allow-Credentials", "true");*/
-
         return new ResponseEntity<>(loginUser, HttpStatus.ACCEPTED);
     }
 
