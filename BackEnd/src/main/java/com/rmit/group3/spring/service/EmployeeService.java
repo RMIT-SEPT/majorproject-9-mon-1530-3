@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class EmployeeService {
+
     @Autowired
     private EmployeeRepository employeeRepository;
 
@@ -18,7 +19,7 @@ public class EmployeeService {
         }
         catch(Exception e)
         {
-            throw new EmployeeException("Employee " + employee.getEmployeeID() + "already exists");
+            throw new EmployeeException("Employee " + employee.getEmployeeID() + " already exists");
         }
     }
 

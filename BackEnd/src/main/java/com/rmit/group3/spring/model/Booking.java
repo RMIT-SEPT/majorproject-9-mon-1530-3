@@ -12,6 +12,14 @@ import java.util.Date;
 @Entity
 public class Booking {
 
+    public Booking(@NotNull long customerID, @NotNull long employeeID, Date date, Time time, boolean confirmed) {
+        this.customerID = customerID;
+        this.employeeID = employeeID;
+        this.date = date;
+        this.time = time;
+        this.confirmed = confirmed;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native",strategy = "native")
