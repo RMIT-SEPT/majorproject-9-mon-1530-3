@@ -36,4 +36,14 @@ public class EmployeeController {
         Employee employee1 = employeeService.saveOrUpdateEmployee(employee);
         return new ResponseEntity<>(employee, HttpStatus.CREATED);
     }
+
+    @GetMapping("/get")
+    public ResponseEntity<?> getEmployeeByID(@Valid @RequestBody Employee employee){
+        Employee employee1 = employeeService.findEmployeeByID(employee.getEmployeeID());
+
+        return new ResponseEntity<Employee>(employee1,HttpStatus.OK);
+    }
+
+    @GetMapping("/all")
+    public Iterable<Employee> getAllEmployees(){return employeeService.getAllEmployees();}
 }
