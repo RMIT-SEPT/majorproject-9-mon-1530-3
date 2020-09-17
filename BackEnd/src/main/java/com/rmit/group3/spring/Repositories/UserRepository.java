@@ -12,4 +12,7 @@ public interface UserRepository extends CrudRepository<User,Long> {
     Boolean existsByUsernameAndPassword(@Param("username") String username, @Param("password") String password);
 
     Boolean existsByUsername(@Param("username") String username);
+
+    User findByUsername(@Param("username") String username);
+
 }

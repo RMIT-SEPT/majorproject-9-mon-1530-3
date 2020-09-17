@@ -35,10 +35,18 @@ public class UserController {
 
         }
 
+        //See if login success
         boolean loginUser = userService.login(user);
 
-        return new ResponseEntity<>(loginUser, HttpStatus.ACCEPTED);
+        if (loginUser){
+            //Get user type
+            User returnUser = userService.getUserType(user.getUsername());
+            return new ResponseEntity<>(returnUser,HttpStatus.ACCEPTED);
+        }
+
+        return new ResponseEntity<>(false,HttpStatus.ACCEPTED);
+
+
+
     }
-
-
 }

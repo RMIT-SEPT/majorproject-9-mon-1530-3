@@ -42,7 +42,6 @@ public class CustomerController {
 
         }
 
-        System.out.println(customer.getPassword());
         User newUser = userService.createFromCustomer(customer);
 
         if (newUser != null){

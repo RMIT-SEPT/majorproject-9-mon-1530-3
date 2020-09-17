@@ -12,7 +12,7 @@ public class Employee {
 
 
     @Id
-    private Long employeeID;
+    private String username;
 
     @NotBlank(message = "First name required")
     private String firstName;
@@ -26,6 +26,12 @@ public class Employee {
     private Date created_At;
     @JsonFormat(pattern = "dd-mm-yyyy")
     private Date updated_At;
+
+    //If employee had admin priv
+    private boolean admin;
+
+    @Transient
+    private String password;
 
     public Date getCreated_At() {
         return created_At;
@@ -46,12 +52,12 @@ public class Employee {
     public Employee() {
     }
 
-    public Long getEmployeeID() {
-        return employeeID;
-    }
+    public String getUsername() { return username; }
 
-    public void setEmployeeID(Long employeeID) {
-        this.employeeID = employeeID;
+    public String getPassword() { return password; }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getFirstName() {
@@ -77,6 +83,8 @@ public class Employee {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public boolean isAdmin() { return admin; }
 
     
     @PrePersist

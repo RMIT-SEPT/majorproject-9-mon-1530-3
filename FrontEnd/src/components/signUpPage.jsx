@@ -10,7 +10,9 @@ class Register extends Component {
           lastName: "",
           email: "",
           username: "",
-          password: ""
+          password: "",
+          userType: "",
+          admin:""
       };
       this.onChange = this.onChange.bind(this);
       this.onSubmit = this.onSubmit.bind(this);
@@ -22,24 +24,34 @@ class Register extends Component {
 
   async onSubmit(event){
       event.preventDefault();
-      const customer = {
+
+      if (this.state.userType == "admin"){
+          console.log("ADMIN!!!")
+          this.state.userType = "employee"
+          this.state.admin = true
+      }
+
+      const user = {
           "firstName": this.state.firstName,
           "lastName": this.state.lastName,
           "email": this.state.email,
           "username": this.state.username,
-          "password": this.state.password
+          "password": this.state.password,
+          "admin": this.state.admin
       }
 
-      console.log(customer)
-      let valid = await signUp(customer)
-      console.log(valid)
+      let valid = await signUp(user, this.state.userType)
+      if (valid == "username"){
+          alert("Error: User already exists with that username")
+      } else{
+          window.location.href = '/login';
+      }
   }
 
 
   render() {
     return (
       <div>
-          <a className="navbar-link" href="/login">Login</a>
         <h1>CREATE A NEW ACCOUNT</h1>
         <br></br>
           <form onSubmit={this.onSubmit}>
@@ -73,6 +85,21 @@ class Register extends Component {
                    placeholder="Password"
                    value={this.state.password}
                    onChange={this.onChange}/>
+
+            <h5>Account Type</h5>
+            <input type="radio" id="customer" name="userType"
+                   value="customer" checked={this.state.userType === "customer"}
+                   onChange={this.onChange} />
+            <label htmlFor="customer">Customer</label><br/>
+            <input type="radio" id="employee" name="userType"
+                   value="employee" checked={this.state.userType === "employee"}
+                   onChange={this.onChange}/>
+            <label htmlFor="employee">Employee</label><br/>
+            <input type="radio" id="admin" name="userType"
+                   value="admin" checked={this.state.userType === "admin"}
+                   onChange={this.onChange}/>
+            <label htmlFor="admin">Admin</label>
+
             <br></br>
             <br></br>
             <input type="submit" className="btn btn-primary btn-sm"/>
