@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import logo from '../images/logo.png'
+import Logo from "./Layout/Logo"
 
 class About extends Component {
 
     render() {
         return(
             <div className="aboutContent">
-            <div id="logo" align="center"><img src={logo} alt="logo that says the text booqing"></img></div>
+            <div id="logo" align="center"><Logo /></div>
             <br></br>
             <hr></hr>
             <h1><i>welcome.</i></h1>
@@ -15,6 +15,13 @@ class About extends Component {
             <p>we do washes, trims, haircuts, claw trims and anything you could ever want for your pet
                 for the best prices!
             </p>
+            <hr></hr>
+            <div className="contactDetails">
+            <p>Phone: 03 1234 5678</p>
+            <p>Email: business@booqing.com</p>
+            <p>Address: 123 Random Street,</p>
+            <p>3000 Melbourne Victoria</p>
+            </div>
             </div>
         )
     }
