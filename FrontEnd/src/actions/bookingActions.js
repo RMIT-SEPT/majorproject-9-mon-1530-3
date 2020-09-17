@@ -39,4 +39,16 @@ export async function deleteBooking(booking) {
     }
 }
 
-
+export async function getAllStaff(){
+    try{
+        return await axios.get("http://localhost:8080/api/employee/all")
+            .then(async function(response){return response.data})
+            .catch(error => {return error})
+    }
+    catch(err){
+        return {
+            type:GET_ERRORS,
+            payload:err.response.data
+        }
+    }
+}
