@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Logo from "./Layout/Logo"
-import Login from "./Layout/LoginForm"
 
 class Index extends Component {
   state = {};
@@ -33,10 +32,12 @@ class Index extends Component {
   render() {
     return (
       
-      <div id="signContent">
-      <div id="logo"><Logo /></div>
-      <Login />
-
+      <div>
+      <center>
+      <Logo />
+      <br></br>
+      <p>the number 1 pet salon in your local area.</p>
+      </center>
       </div>
 
     );

@@ -31,7 +31,7 @@ SIGNIN BOX/SIGNUP BOX
 
 .signs {
   font-family: 'Avenir Next';
-  font-size: 30px;
+  font-size: 18px;
   align-self: center;
 }
 
@@ -52,10 +52,14 @@ SIGNIN BOX/SIGNUP BOX
 }
 
 .signs a {
-  font-size: 20px;
+  font-size: 18px;
   color: white;
   background: transparent;
   text-decoration: underline;
+}
+
+.signs a:hover {
+  color: #5E90F0;
 }
 
 /**
@@ -63,16 +67,37 @@ ABOUT US PAGE
 **/
 
 .aboutContent {
-  width: 700px;
+  width: 500px;
   align-items: center;
   font-family: 'Avenir Next';
   text-align: justify;
 }
 
-.aboutContent h1 {
-  font-size: 50px;
+.contactDetails p {
+  font-size: 15px;
 }
 
-.contactDetails p {
-  font-size: 20px;
+/**
+PHONE SCREENS
+**/
+
+@media only screen and (max-width: 600px) {
+  #signContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 55%;
+    margin-left: 22%;
+  }
+
+  .aboutContent {
+    width: 450px;
+  }
+
+  .aboutContent img {
+    width: 90%;
+  }
 }

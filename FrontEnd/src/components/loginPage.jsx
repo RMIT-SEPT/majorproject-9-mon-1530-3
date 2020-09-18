@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {userLogin} from "../actions/LoginActions";
+import Logo from "./Layout/Logo"
 
 class Login extends Component {
     constructor() {
@@ -43,26 +44,28 @@ class Login extends Component {
 
   render() {
     return (
-      <div>
-          <h1>Login Page</h1>
+      <div id="signContent">
+          <div className="logo"><Logo /></div>
+          <br></br>
+          <div className="signs">
           <form onSubmit={this.onSubmit}>
-              <br></br>
-              <input class="input" name="username"
-                     placeholder="Username"
+              <input className="input" name="username"
+                     placeholder="username."
                      value={this.state.username}
-                     onChange={this.onChange}
+                     onChange={this.onChange} required
               />
               <br></br>
-              <input class="input" name="password"
-                     placeholder="Password"
+              <input className="input" name="password"
+                     placeholder="password."
                      type="password"
                      value={this.state.password}
-                     onChange={this.onChange}
+                     onChange={this.onChange} required
               />
               <br></br>
-              <br></br>
-              <input type="submit" className="btn btn-primary btn-sm"/>
+              <input className="submit" type="submit" value="login."/>
           </form>
+          <a href="/register">sign up instead?</a>
+          </div>
       </div>
     );
   }
