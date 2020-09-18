@@ -4,7 +4,7 @@ class LoginForm extends Component {
     render() {
         return(
         <div className="signs">
-        <form>
+        <form >
         <input className="input" name="username" placeholder="username." /><br></br>
         <input className="input" name="password" placeholder="password." type="password"/> <br></br>
         <input className="submit" type="submit" value="login." onClick={this.submit}/>

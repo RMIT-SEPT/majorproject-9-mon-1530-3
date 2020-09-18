@@ -51,10 +51,9 @@ SIGNIN BOX/SIGNUP BOX
   width: 97%;
 }
 
-.signs a {
+.signContent a {
   font-size: 20px;
   color: white;
-  background: transparent;
   text-decoration: underline;
 }
 
