@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {signUp} from "../actions/SignUpActions";
+import Logo from "./Layout/Logo";
 
 class Register extends Component {
   constructor() {
@@ -51,59 +52,47 @@ class Register extends Component {
 
   render() {
     return (
-      <div>
-        <h1>CREATE A NEW ACCOUNT</h1>
-        <br></br>
-          <form onSubmit={this.onSubmit}>
-            <h5>First name</h5>
-            <input class="input" name="firstName"
-                   placeholder="First Name"
-                   value={this.state.firstName}
-                   onChange={this.onChange} />
+      <div id="signContent">
+        <div className="logo"><Logo /></div>
+        <div className="signs">
+        <form onSubmit={this.onSubmit}>
 
-            <h5>Last name</h5>
-            <input class="input" name="lastName"
-                   placeholder="Last Name"
-                   value={this.state.lastName}
-                   onChange={this.onChange}/>
+            <input className="input" name="firstName"
+            placeholder="first name."
+            value={this.state.firstName}
+            onChange={this.onChange} /><br></br>
 
-            <h5>Email address</h5>
-            <input class="input" name="email"
-                   placeholder="Email"
-                   value={this.state.email}
-                   onChange={this.onChange}/>
+            <input className="input" name="lastName"
+            placeholder="last name."
+            value={this.state.lastName}
+            onChange={this.onChange}/><br></br>       
 
-            <h5>Username</h5>
-            <input class="input" name="username"
-                   placeholder="Username"
-                   value={this.state.username}
-                   onChange={this.onChange}/>
+            <input className="input" name="username"
+            placeholder="username."
+            value={this.state.username}
+            onChange={this.onChange} required/><br></br>
 
-            <h5>Password</h5>
-            <input class="input"type="password"
-                   name="password"
-                   placeholder="Password"
-                   value={this.state.password}
-                   onChange={this.onChange}/>
+            <input className="input"type="password"
+            name="password"
+            placeholder="password."
+            value={this.state.password}
+            onChange={this.onChange} required/><br></br>
 
-            <h5>Account Type</h5>
-            <input type="radio" id="customer" name="userType"
+            <input className="input" name="email"
+            placeholder="email."
+            value={this.state.email}
+            onChange={this.onChange}/><br></br>
+
+            <input className="input" name="phone"
+            placeholder="phone number."/><br></br>
+
+            <input type="hidden" id="customer" name="userType"
                    value="customer" checked={this.state.userType === "customer"}
                    onChange={this.onChange} />
-            <label htmlFor="customer">Customer</label><br/>
-            <input type="radio" id="employee" name="userType"
-                   value="employee" checked={this.state.userType === "employee"}
-                   onChange={this.onChange}/>
-            <label htmlFor="employee">Employee</label><br/>
-            <input type="radio" id="admin" name="userType"
-                   value="admin" checked={this.state.userType === "admin"}
-                   onChange={this.onChange}/>
-            <label htmlFor="admin">Admin</label>
-
-            <br></br>
-            <br></br>
-            <input type="submit" className="btn btn-primary btn-sm"/>
+            <input type="submit" className="submit" value="register."/>
           </form>
+          <a href="sign in instead?"></a>
+          </div>
       </div>
     );
   }

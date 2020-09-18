@@ -21,7 +21,7 @@ function App() {
         <div>
         <Nav></Nav>
           <header className="App-header">
-              <Route exact path="/index" component={Index}/>
+              <Route exact path="/" exact={true} component={Index}/>
               <Route exact path="/login" component={Login}/>
               <Route exact path="/register" component={Register}/>
               <Route exact path="/about" component={About}/>
@@ -30,6 +30,7 @@ function App() {
           </header>
           </div>
       </Router>
+
     </Provider>
   );
 }

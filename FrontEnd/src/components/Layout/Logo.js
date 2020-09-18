@@ -4,7 +4,7 @@ import logo from '../../images/logo.png'
 class Logo extends Component {
     render() {
         return (
-            <img src={logo} alt="Logo that says booqing with a red and blue underline"></img>
+            <img id="logoImg" src={logo} alt="Logo that says booqing with a red and blue underline" width="500px"></img>
         )
     }
 }

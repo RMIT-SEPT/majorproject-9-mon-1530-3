@@ -22,14 +22,13 @@ class Nav extends Component {
                 <div id="navibar">
                 <div id="menuIcon" onClick={this.displayMenu} onMouseOut={this.undisplayMenu}><img src={menu} alt="menu icon"></img></div>
                 <div id="navlinks">
-                <a href = "/index">home</a>
+                <a href = "/login">home</a>
                 <a href = "/about">about us</a>
                 <a href = "/book">book</a>
                 </div>
-                <img src={logo} alt="booqing logo"></img>
+                <a href="/"><img src={logo} alt="booqing logo"></img></a>
                 </div>
             </nav>
-            <br></br>
             <Popup />
             </div>
         )
