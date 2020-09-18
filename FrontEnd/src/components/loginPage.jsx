@@ -4,6 +4,7 @@ import {userLogin} from "../actions/LoginActions";
 class Login extends Component {
     constructor() {
         super();
+        sessionStorage.setItem('username', "NULL");
 
         this.state = {
             username: "",
@@ -24,13 +25,17 @@ class Login extends Component {
         const user = {
             "username":this.state.username,
             "password":this.state.password,
-            "userType":"Customer"
+            "userType":"customer"
         }
-        console.log(user)
+
         let valid = await userLogin(user)
 
         if (valid){
-            console.log("User Found :)")
+            sessionStorage.setItem('username', this.state.username);
+            sessionStorage.setItem('userType', valid["userType"])
+            console.log(sessionStorage.getItem('username'))
+            console.log(sessionStorage.getItem('userType'))
+            alert("User, " + sessionStorage.getItem('username') + " is now logged in")
         } else{
             console.log("User Not Found!")
         }
@@ -39,7 +44,6 @@ class Login extends Component {
   render() {
     return (
       <div>
-          <a className="navbar-link" href="/register">Register</a>
           <h1>Login Page</h1>
           <form onSubmit={this.onSubmit}>
               <br></br>
