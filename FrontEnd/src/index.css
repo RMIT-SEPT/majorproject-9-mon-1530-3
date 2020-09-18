@@ -58,6 +58,10 @@ SIGNIN BOX/SIGNUP BOX
   text-decoration: underline;
 }
 
+.signs a:hover {
+  color: #5E90F0;
+}
+
 /**
 ABOUT US PAGE
 **/

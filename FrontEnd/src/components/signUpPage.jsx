@@ -91,7 +91,7 @@ class Register extends Component {
                    onChange={this.onChange} />
             <input type="submit" className="submit" value="register."/>
           </form>
-          <a href="sign in instead?"></a>
+          <a href="/login">sign in instead?</a>
           </div>
       </div>
     );

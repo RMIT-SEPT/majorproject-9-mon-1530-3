@@ -60,10 +60,14 @@ nav #navibar {
   align-items: center;
 }
 
-nav a, nav a:hover {
+nav a {
   font-family: 'Avenir Next';
   font-size: 30px;
   color: white;
+}
+
+nav a:hover {
+  color: #66C7F4;
 }
 
 #navlinks {
