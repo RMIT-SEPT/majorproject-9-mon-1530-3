@@ -4,3 +4,12 @@ creds2.sh
 terraform.tfstate
 terraform.tfstate.backup
 tmp/
+/node_modules/
+/build
+/coverage
+
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+npm-debug.log*
