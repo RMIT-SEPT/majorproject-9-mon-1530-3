@@ -123,30 +123,22 @@ export class CreateBooking extends Component {
         const formStyle = {color:'black', fontSize:'small',width:'100%'};
         return (
             <div>
-            <div id = 'booking'> 
-
-                <h4> <a href = "/CreateBooking_Service">back to pick service</a> </h4>
-
-                <h4>Create Booking:</h4>
-                <div className = "form">
+                <div id = 'booking'>
+                <h3>Select service:</h3>
                 <form onSubmit={this.onSubmit}>
-                <div className = "form-group"><h5>User ID: (no ID? create account<a href="/Register"> here</a>)</h5>
-                    <input style={formStyle} type = "number" className = "form-control form-control-lg "
-                        placeholder = "Unique user ID" name = "customerID" value = {this.state.customerID}  onChange = {this.onChange} />
-                </div>
-                <div className = "form-group"><h5>Requested date:</h5>
-                    <input style={formStyle} type = "date" className = "form-control form-control-lg " min={this.props.today}
-                        placeholder = "Requested booking date" name = "date" value = {this.state.date} onChange = {this.onChange}/>
-                   <br/>
-                   <div style={{width:'100%'}}>
-                        <div style={{float:"left"}}>{this.state.timeSlots.slice(0,this.state.timeSlots.length/2)}</div>
-                        <div style={{float:"right"}}>{this.state.timeSlots.slice(this.state.timeSlots.length/2,this.state.timeSlots.length)}</div>
-                   </div>
-                </div><br/>
-                <input className = "btn btn-primary btn-block mt-4" type = "submit"></input>
-                </form>
-                </div>
-                </div>
+                <select id='selectService' onChange={this.getStaff} defaultValue='Please select..' style={formStyle} > 
+                <option style={formStyle}>please select..</option>
+                </select>
+                <br/>
+                <select id ='staffSelect' style={formStyle} defaultValue="">
+                    {this.state.staff}
+                </select>
+                <br/>
+                <br/>
+               <input className = "btn btn-primary btn-block mt-4" type = "submit"></input>
+                 </form>
+
+                  </div>
             </div>
         )
     }

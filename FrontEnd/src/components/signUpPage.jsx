@@ -25,7 +25,7 @@ class Register extends Component {
   async onSubmit(event){
       event.preventDefault();
 
-      if (this.state.userType == "admin"){
+      if (this.state.userType === "admin"){
           console.log("ADMIN!!!")
           this.state.userType = "employee"
           this.state.admin = true
@@ -41,7 +41,7 @@ class Register extends Component {
       }
 
       let valid = await signUp(user, this.state.userType)
-      if (valid == "username"){
+      if (valid === "username"){
           alert("Error: User already exists with that username")
       } else{
           window.location.href = '/login';
