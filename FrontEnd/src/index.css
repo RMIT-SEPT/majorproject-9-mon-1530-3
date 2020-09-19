@@ -21,16 +21,15 @@ LOGO
 }
 
 #menuIcon:hover {
-  background: #5E90F0;
+  background: #5e90f0;
 }
-
 
 /**
 SIGNIN BOX/SIGNUP BOX
 **/
 
 .signs {
-  font-family: 'Avenir Next';
+  font-family: "Avenir Next";
   font-size: 18px;
   align-self: center;
 }
@@ -47,7 +46,7 @@ SIGNIN BOX/SIGNUP BOX
   margin: 5px;
   border: none;
   padding: 10px 15px;
-  background-color: #5E90F0;
+  background-color: #5e90f0;
   width: 97%;
 }
 
@@ -59,7 +58,7 @@ SIGNIN BOX/SIGNUP BOX
 }
 
 .signs a:hover {
-  color: #5E90F0;
+  color: #5e90f0;
 }
 
 /**
@@ -69,7 +68,7 @@ ABOUT US PAGE
 .aboutContent {
   width: 500px;
   align-items: center;
-  font-family: 'Avenir Next';
+  font-family: "Avenir Next";
   text-align: justify;
 }
 
@@ -77,6 +76,68 @@ ABOUT US PAGE
   font-size: 15px;
 }
 
+/**
+BOOKING PAGE
+**/
+.submitBooking {
+  margin: 5px;
+  border: none;
+  padding: 5px 20px;
+  background-color: #ff1053;
+  color: #fff;
+  width: 94%;
+}
+
+.submitBooking:hover {
+  padding: 5px 20px;
+  transition: all 0.3s ease-out;
+  background: #fff;
+  color: #ff1053;
+  transition: 250ms;
+}
+
+.createBooking {
+  width: 200px;
+  align-items: center;
+  font-family: sans-serif;
+  text-align: justfiy;
+}
+
+.serviceSelect {
+  color: white;
+  padding: 6px;
+  font-size: 6px;
+  border: bold;
+  cursor: pointer;
+}
+
+.employeeSelect {
+  color: white;
+  padding: 6px;
+  font-size: 6px;
+  border: bold;
+  cursor: pointer;
+}
+
+.date {
+  background-color: #fff;
+  color: black;
+  padding: 3px 14px;
+  font-size: 18px;
+  border: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+.time {
+  background-color: #fff;
+  color: black;
+  padding: 3px 14px;
+  font-size: 18px;
+  border: bold;
+  cursor: pointer;
+  width: 100%;
+}
 /**
 PHONE SCREENS
 **/

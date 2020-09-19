@@ -27,8 +27,8 @@
 }
 
 * {
-  background: #1B1B1D;
-  font-family: 'Avenir Next', 'Arial', sans-serif;
+  background: #1b1b1d;
+  font-family: "Avenir Next", "Arial", sans-serif;
   color: white;
   font-size: 20px;
 }
@@ -61,13 +61,13 @@ nav #navibar {
 }
 
 nav a {
-  font-family: 'Avenir Next';
+  font-family: sans-serif;
   font-size: 30px;
   color: white;
 }
 
 nav a:hover {
-  color: #66C7F4;
+  color: #66c7f4;
 }
 
 #navlinks {
@@ -75,7 +75,6 @@ nav a:hover {
   display: flex;
   justify-content: space-between;
 }
-
 
 nav img {
   height: 60px;
@@ -93,9 +92,49 @@ nav img {
 }
 
 .popupMenu a {
-  font-family: 'Avenir Next';
+  font-family: "Avenir Next";
   font-size: 18px;
   color: white;
+}
+
+.fa-bars {
+  color: #fff;
+}
+
+.menu-bar {
+  position: relative;
+}
+
+.nav-links {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.nav-links:hover {
+  background-color: #fff;
+  border-radius: 4px;
+  transition: all 0.2s ease-out;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 127px;
+  position: absolute;
+  top: 80px;
+  left: -100%;
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+.nav-menu.active {
+  background: #5e90f0;
+  left: 0;
+  opacity: 1;
+  transition: all 0.5s ease;
+  z-index: 1;
 }
 
 @media only screen and (max-width: 600px) {

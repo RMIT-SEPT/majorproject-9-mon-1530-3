@@ -1,38 +1,66 @@
-import React, { Component } from 'react'
-import logo from '../../images/logo-mini.png'
-import menu from '../../images/menu.png'
-import Popup from './PopupMenu'
+import React, { Component } from "react";
+import logo from "../../images/logo-mini.png";
+import menu from "../../images/menu.png";
+import { PopupMenu } from "./PopupMenu";
 
 class Nav extends Component {
+  state = { clicked: false };
 
-    displayMenu() {
-        var m = document.getElementById("menuContent");
-        m.style.display = "block";
-    }
+  handleClick = () => {
+    this.setState({ clicked: !this.state.clicked });
+  };
 
-    undisplayMenu(event) {
-        var m = document.getElementById("menuContent");
-        m.style.display = "none";
-    }
+  //displayMenu() {
+  // var m = document.getElementById("menuContent");
+  // m.style.display = "block";
+  //}
 
-    render() {
-        return (
-            <div>
-            <nav>
-                <div id="navibar">
-                <div id="menuIcon" onClick={this.displayMenu} onMouseOut={this.undisplayMenu}><img src={menu} alt="menu icon"></img></div>
-                <div id="navlinks">
-                <a href = "/login">home</a>
-                <a href = "/about">about us</a>
-                <a href = "/book">book</a>
-                </div>
-                <a href="/"><img src={logo} alt="booqing logo"></img></a>
-                </div>
-            </nav>
-            <Popup />
+  //undisplayMenu(event) {
+  // var m = document.getElementById("menuContent");
+  // m.style.display = "none";
+  //}
+
+  render() {
+    return (
+      <div>
+        <nav className="menu-bar">
+          <div id="navibar">
+            <div
+              className="menu-icon"
+              id="menuIcon"
+              onClick={this.handleClick}
+              //onMouseOut={this.undisplayMenu}
+            >
+              <i
+                className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}
+              ></i>
+              <ul
+                className={this.state.clicked ? "nav-menu active" : "nav-menu"}
+              >
+                {PopupMenu.map((item, index) => {
+                  return (
+                    <li key={index}>
+                      <a className={item.cName} href={item.url}>
+                        {item.title}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
-        )
-    }
+            <div id="navlinks">
+              <a href="/login">home</a>
+              <a href="/about">about us</a>
+              <a href="/book">book</a>
+            </div>
+            <a href="/">
+              <img src={logo} alt="booqing logo"></img>
+            </a>
+          </div>
+        </nav>
+      </div>
+    );
+  }
 }
 
 export default Nav;

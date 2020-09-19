@@ -1,20 +1,19 @@
-import React, { Component } from 'react'
+export const PopupMenu = [
+  {
+    title: "Account Info",
+    url: "#",
+    cName: "nav-links",
+  },
 
-class PopupMenu extends Component {
+  {
+    title: "Cancel Booking",
+    url: "#",
+    cName: "nav-links",
+  },
 
-
-    render() {
-        return (
-            <div id="menuContent" className="popupMenu">
-                <a href="/">link1</a><br></br><br></br>
-                <a href="/">link2</a><br></br><br></br>
-                <a href="/">link3</a><br></br><br></br>
-                <a href="/">link4</a><br></br><br></br>
-                <a href="/">link5</a><br></br><br></br>
-                <a href="/">link6</a><br></br>
-            </div>
-        )
-    }
-}
-
-export default PopupMenu;
+  {
+    title: "Edit Employee",
+    url: "#",
+    cName: "nav-links",
+  },
+];
