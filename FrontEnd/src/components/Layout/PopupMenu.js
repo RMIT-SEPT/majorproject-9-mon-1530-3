@@ -6,7 +6,7 @@ class PopupMenu extends Component {
     render() {
         return (
             <div id="menuContent" className="popupMenu">
-                <a href="/">link1</a><br></br><br></br>
+                <a href="/cancel">cancel booking.</a><br></br><br></br>
                 <a href="/">link2</a><br></br><br></br>
                 <a href="/">link3</a><br></br><br></br>
                 <a href="/">link4</a><br></br><br></br>
