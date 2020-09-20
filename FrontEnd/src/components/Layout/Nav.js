@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import logo from "../../images/logo-mini.png";
-import menu from "../../images/menu.png";
 import { PopupMenu } from "./PopupMenu";
 
 class Nav extends Component {
@@ -29,7 +28,6 @@ class Nav extends Component {
               className="menu-icon"
               id="menuIcon"
               onClick={this.handleClick}
-              //onMouseOut={this.undisplayMenu}
             >
               <i
                 className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}
@@ -39,11 +37,9 @@ class Nav extends Component {
               >
                 {PopupMenu.map((item, index) => {
                   return (
-                    <li key={index}>
-                      <a className={item.cName} href={item.url}>
+                    <a className={item.cName} href={item.url}>
                         {item.title}
                       </a>
-                    </li>
                   );
                 })}
               </ul>

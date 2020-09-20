@@ -17,11 +17,11 @@ LOGO
 }
 
 #menuIcon {
-  padding: 5px;
+  padding: 10px;
 }
 
 #menuIcon:hover {
-  background: #5e90f0;
+  background: #66c7f4;
 }
 
 /**
@@ -80,26 +80,16 @@ ABOUT US PAGE
 BOOKING PAGE
 **/
 .submitBooking {
-  margin: 5px;
+  margin-top: 10px;
   border: none;
-  padding: 5px 20px;
+  padding: 10px 15px;
   background-color: #ff1053;
-  color: #fff;
-  width: 94%;
-}
-
-.submitBooking:hover {
-  padding: 5px 20px;
-  transition: all 0.3s ease-out;
-  background: #fff;
-  color: #ff1053;
-  transition: 250ms;
+  width: 100%;
 }
 
 .createBooking {
   width: 200px;
   align-items: center;
-  font-family: sans-serif;
   text-align: justfiy;
 }
 

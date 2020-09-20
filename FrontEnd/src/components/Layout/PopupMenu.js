@@ -1,19 +1,33 @@
 export const PopupMenu = [
   {
-    title: "Account Info",
+    title: "account info.",
     url: "#",
     cName: "nav-links",
   },
 
   {
-    title: "Cancel Booking",
+    title: "cancel booking.",
+    url: "/cancel",
+    cName: "nav-links",
+  },
+
+  {
+    title: "booking history.",
     url: "#",
     cName: "nav-links",
   },
 
   {
-    title: "Edit Employee",
+    title: "edit employees.",
     url: "#",
     cName: "nav-links",
   },
+
+  {
+    title: "edit services.",
+    url: "#",
+    cName: "nav-links",
+  },
+
+  
 ];

@@ -13,6 +13,7 @@ import CreateBooking from './components/CreateBooking';
 import Nav from './components/Layout/Nav';
 import EditOrDeleteBooking from './components/EditOrDeleteBooking';
 import About from './components/aboutUs';
+import BookTest from "./components/CreateBooking_Service"
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
         <div>
         <Nav></Nav>
           <header className="App-header">
-              <Route exact path="/" exact={true} component={Index}/>
+              <Route exact path="/booktest" component={BookTest}/>
+              <Route exact path="/" component={Index}/>
               <Route exact path="/login" component={Login}/>
               <Route exact path="/register" component={Register}/>
               <Route exact path="/about" component={About}/>
