@@ -1,12 +1,10 @@
 package com.rmit.group3.spring.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-import java.sql.Time;
 import java.util.Date;
 
 @Entity
@@ -14,39 +12,12 @@ public class Employee {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
-    @GenericGenerator(name = "native", strategy = "native")
-    private Long employeeID;
+    private String username;
 
     @NotBlank(message = "First name required")
     private String firstName;
     @NotBlank(message = "Last name required")
     private String lastName;
-    @NotBlank(message = "service detail required")
-    private String service;
-
-
-    @NotBlank(message = "need start time")
-    private Time startTime;
-
-    @NotBlank(message = "need finish time")
-    private Time endTime;
-
-    public Date getEndTime() {
-        return endTime;
-    }
-
-    public void setEndTime(Time endTime) {
-        this.endTime = endTime;
-    }
-
-    public Date getStartTime() {
-        return startTime;
-    }
-
-    public void setStartTime(Time startTime) {
-        this.startTime = startTime;
-    }
 
     @Email
     private String email;
@@ -56,13 +27,11 @@ public class Employee {
     @JsonFormat(pattern = "dd-mm-yyyy")
     private Date updated_At;
 
-    public String getService() {
-        return service;
-    }
+    //If employee had admin priv
+    private boolean admin;
 
-    public void setService(String service) {
-        this.service = service;
-    }
+    @Transient
+    private String password;
 
     public Date getCreated_At() {
         return created_At;
@@ -83,12 +52,12 @@ public class Employee {
     public Employee() {
     }
 
-    public Long getEmployeeID() {
-        return employeeID;
-    }
+    public String getUsername() { return username; }
 
-    public void setEmployeeID(Long employeeID) {
-        this.employeeID = employeeID;
+    public String getPassword() { return password; }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getFirstName() {
@@ -114,6 +83,8 @@ public class Employee {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public boolean isAdmin() { return admin; }
 
     
     @PrePersist

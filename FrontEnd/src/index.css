@@ -1,17 +1,154 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/**
+SIGNUP/SIGNIN DIVS
+**/
+
+#signContent {
+  display: flex;
+  align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/**
+LOGO
+**/
+
+#logo {
+  height: 100%;
+  margin-right: 100px;
+}
+
+#menuIcon {
+  padding: 10px;
+}
+
+#menuIcon:hover {
+  background: #66c7f4;
+}
+
+/**
+SIGNIN BOX/SIGNUP BOX
+**/
+
+.signs {
+  font-family: "Avenir Next";
+  font-size: 18px;
+  align-self: center;
 }
 
 .input {
   color: black;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  background: white;
+}
+
+.submit {
+  margin: 5px;
+  border: none;
+  padding: 10px 15px;
+  background-color: #5e90f0;
+  width: 97%;
+}
+
+.signs a {
+  font-size: 18px;
+  color: white;
+  background: transparent;
+  text-decoration: underline;
+}
+
+.signs a:hover {
+  color: #5e90f0;
+}
+
+/**
+ABOUT US PAGE
+**/
+
+.aboutContent {
+  width: 500px;
+  align-items: center;
+  font-family: "Avenir Next";
+  text-align: justify;
+}
+
+.contactDetails p {
+  font-size: 15px;
+}
+
+/**
+BOOKING PAGE
+**/
+.submitBooking {
+  margin-top: 10px;
+  border: none;
+  padding: 10px 15px;
+  background-color: #ff1053;
+  width: 100%;
+}
+
+.createBooking {
+  width: 200px;
+  align-items: center;
+  text-align: justfiy;
+}
+
+.serviceSelect {
+  color: white;
+  padding: 6px;
+  font-size: 6px;
+  border: bold;
+  cursor: pointer;
+}
+
+.employeeSelect {
+  color: white;
+  padding: 6px;
+  font-size: 6px;
+  border: bold;
+  cursor: pointer;
+}
+
+.date {
+  background-color: #fff;
+  color: black;
+  padding: 3px 14px;
+  font-size: 18px;
+  border: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+.time {
+  background-color: #fff;
+  color: black;
+  padding: 3px 14px;
+  font-size: 18px;
+  border: bold;
+  cursor: pointer;
+  width: 100%;
+}
+/**
+PHONE SCREENS
+**/
+
+@media only screen and (max-width: 600px) {
+  #signContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 55%;
+    margin-left: 22%;
+  }
+
+  .aboutContent {
+    width: 450px;
+  }
+
+  .aboutContent img {
+    width: 90%;
+  }
 }
