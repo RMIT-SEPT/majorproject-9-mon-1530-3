@@ -1,4 +1,9 @@
 export const PopupMenu = [
+    {
+        title: "login.",
+        url: "/login",
+        cName: "nav-links",
+    },
   {
     title: "account info.",
     url: "#",

@@ -3,23 +3,20 @@ import logo from "../../images/logo-mini.png";
 import { PopupMenu } from "./PopupMenu";
 
 class Nav extends Component {
-  state = { clicked: false };
+  state = { 
+      clicked: false,
+  };
 
   handleClick = () => {
     this.setState({ clicked: !this.state.clicked });
   };
 
-  //displayMenu() {
-  // var m = document.getElementById("menuContent");
-  // m.style.display = "block";
-  //}
+//   window.addEventListener('storage', function(e) {  
 
-  //undisplayMenu(event) {
-  // var m = document.getElementById("menuContent");
-  // m.style.display = "none";
-  //}
+//   });
 
   render() {
+    
     return (
       <div>
         <nav className="menu-bar">
@@ -35,17 +32,18 @@ class Nav extends Component {
               <ul
                 className={this.state.clicked ? "nav-menu active" : "nav-menu"}
               >
-                {PopupMenu.map((item, index) => {
+                {PopupMenu.map((item) => {
                   return (
                     <a className={item.cName} href={item.url}>
                         {item.title}
                       </a>
                   );
                 })}
+                <a className="nav-links" href="/login" onClick={this.logout}>logout.</a>
               </ul>
             </div>
             <div id="navlinks">
-              <a href="/login">home</a>
+              <a href="/home">about us</a>
               <a href="/about">about us</a>
               <a href="/book">book</a>
             </div>

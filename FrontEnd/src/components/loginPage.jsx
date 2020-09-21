@@ -5,7 +5,6 @@ import Logo from "./Layout/Logo"
 class Login extends Component {
     constructor() {
         super();
-        sessionStorage.setItem('username', "NULL");
 
         this.state = {
             username: "",
@@ -32,13 +31,16 @@ class Login extends Component {
         let valid = await userLogin(user)
 
         if (valid){
-            sessionStorage.setItem('username', this.state.username);
-            sessionStorage.setItem('userType', valid["userType"])
-            console.log(sessionStorage.getItem('username'))
-            console.log(sessionStorage.getItem('userType'))
+            localStorage.setItem('userType', valid["userType"])
+            localStorage.setItem('username',this.state.username);
+            localStorage.setItem('logged',true);
+            console.log(sessionStorage.getItem('username'));
+            console.log(sessionStorage.getItem('userType'));
+            console.log(sessionStorage.getItem('logged'));
             alert("User, " + sessionStorage.getItem('username') + " is now logged in")
+            window.location.replace("/");
         } else{
-            console.log("User Not Found!")
+            console.log("user not found!")
         }
     }
 
