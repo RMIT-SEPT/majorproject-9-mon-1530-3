@@ -20,12 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57280a33-6cac-4ca6-8464-e1b884fcf9b4" name="Default Changelist" comment="Fixed CORS error">
+      <change afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/Repositories/BookingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/Repositories/BookingRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/service/BookingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/webController/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/webController/BookingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/src/actions/bookingActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/actions/bookingActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/src/components/EditOrDeleteBooking.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/components/EditOrDeleteBooking.js" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/test/java/WebController/UserControllerTests.java" beforeDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +102,11 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
+<<<<<<< Updated upstream
   <component name="RunManager" selected="Spring Boot.Application">
+=======
+  <component name="RunManager" selected="Docker.BackEnd/Dockerfile">
+>>>>>>> Stashed changes
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -118,8 +128,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BackEnd/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="" />
+          <option name="buildCliOptions" value="" />
+          <option name="buildOnly" value="true" />
+          <option name="command" value="" />
+          <option name="containerName" value="" />
+          <option name="entrypoint" value="" />
+          <option name="commandLineOptions" value="" />
+          <option name="sourceFilePath" value="BackEnd/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.BackEnd/Dockerfile" />
         <item itemvalue="HTTP Request.generated-requests#1" />
       </list>
     </recent_temporary>
@@ -164,9 +190,21 @@
       <workItem from="1599309108530" duration="593000" />
       <workItem from="1599357548099" duration="2992000" />
       <workItem from="1599379558045" duration="8228000" />
+<<<<<<< Updated upstream
       <workItem from="1599023835237" duration="2637000" />
       <workItem from="1599432408062" duration="40000" />
       <workItem from="1599432659838" duration="2772000" />
+=======
+      <workItem from="1599462899710" duration="1399000" />
+      <workItem from="1599871489566" duration="19000" />
+      <workItem from="1600054363587" duration="2000" />
+      <workItem from="1600066795360" duration="6156000" />
+      <workItem from="1600133371361" duration="16970000" />
+      <workItem from="1600209335628" duration="20737000" />
+      <workItem from="1600300404803" duration="15130000" />
+      <workItem from="1600334398356" duration="2266000" />
+      <workItem from="1600672772413" duration="2781000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="corrected and renamed to group3">
       <created>1596437743075</created>
@@ -251,6 +289,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Fixed CORS error" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="496" y="237" key="#Docker" timestamp="1600675495311">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="496" y="237" key="#Docker/0.0.1792.1120@0.0.1792.1120" timestamp="1600675495311" />
     <state x="384" y="141" key="#Project_Structure" timestamp="1597284927633">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -278,6 +320,7 @@
     <state x="100" y="60" width="2360" height="964" key="DiffContextDialog/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598231339932" />
     <state x="100" y="100" width="2360" height="1240" key="DiffContextDialog/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1596437476321" />
     <state x="100" y="100" width="2360" height="1240" key="DiffContextDialog/0.23.2560.1338/-1080.-446.1080.2537@0.23.2560.1338" timestamp="1596437767367" />
+<<<<<<< Updated upstream
     <state width="2041" height="278" key="GridCell.Tab.0.bottom" timestamp="1599439204414">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
@@ -343,6 +386,81 @@
     <state width="2041" height="278" key="GridCell.Tab.1.right/0.23.2560.1348/-1080.-446.1080.2537@0.23.2560.1348" timestamp="1599438940525" />
     <state width="2517" height="290" key="GridCell.Tab.1.right/313.-1080.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599306025053" />
     <state width="2517" height="348" key="GridCell.Tab.2.bottom" timestamp="1599208794797">
+=======
+    <state width="1396" height="343" key="GridCell.Tab.0.bottom" timestamp="1600673075463">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1396" height="343" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1600673075463" />
+    <state width="1877" height="289" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600255110484" />
+    <state width="1236" height="289" key="GridCell.Tab.0.bottom/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1600251303678" />
+    <state width="2094" height="409" key="GridCell.Tab.0.bottom/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1598832983093" />
+    <state width="2094" height="409" key="GridCell.Tab.0.bottom/0.23.2560.1348/-1080.-446.1080.2537@0.23.2560.1348" timestamp="1598841402998" />
+    <state width="2517" height="252" key="GridCell.Tab.0.bottom/313.-1080.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1600336278600" />
+    <state width="1396" height="343" key="GridCell.Tab.0.center" timestamp="1600673075462">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1396" height="343" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1600673075462" />
+    <state width="1877" height="289" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600255110484" />
+    <state width="1236" height="289" key="GridCell.Tab.0.center/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1600251303678" />
+    <state width="2094" height="409" key="GridCell.Tab.0.center/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1598832983092" />
+    <state width="2094" height="409" key="GridCell.Tab.0.center/0.23.2560.1348/-1080.-446.1080.2537@0.23.2560.1348" timestamp="1598841402997" />
+    <state width="2517" height="252" key="GridCell.Tab.0.center/313.-1080.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1600336278600" />
+    <state width="1396" height="343" key="GridCell.Tab.0.left" timestamp="1600673075461">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1396" height="343" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1600673075461" />
+    <state width="1877" height="289" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600255110484" />
+    <state width="1236" height="289" key="GridCell.Tab.0.left/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1600251303678" />
+    <state width="2094" height="409" key="GridCell.Tab.0.left/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1598832983091" />
+    <state width="2094" height="409" key="GridCell.Tab.0.left/0.23.2560.1348/-1080.-446.1080.2537@0.23.2560.1348" timestamp="1598841402996" />
+    <state width="2517" height="252" key="GridCell.Tab.0.left/313.-1080.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1600336278600" />
+    <state width="1396" height="343" key="GridCell.Tab.0.right" timestamp="1600673075463">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1396" height="343" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1600673075463" />
+    <state width="1877" height="289" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600255110484" />
+    <state width="1236" height="289" key="GridCell.Tab.0.right/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1600251303678" />
+    <state width="2094" height="409" key="GridCell.Tab.0.right/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1598832983093" />
+    <state width="2094" height="409" key="GridCell.Tab.0.right/0.23.2560.1348/-1080.-446.1080.2537@0.23.2560.1348" timestamp="1598841402997" />
+    <state width="2517" height="252" key="GridCell.Tab.0.right/313.-1080.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1600336278600" />
+    <state width="1396" height="343" key="GridCell.Tab.1.bottom" timestamp="1600673075465">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1396" height="343" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1600673075465" />
+    <state width="1877" height="289" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600255110485" />
+    <state width="1236" height="289" key="GridCell.Tab.1.bottom/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1600251303678" />
+    <state width="2094" height="409" key="GridCell.Tab.1.bottom/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1598832983096" />
+    <state width="2094" height="409" key="GridCell.Tab.1.bottom/0.23.2560.1348/-1080.-446.1080.2537@0.23.2560.1348" timestamp="1598841403000" />
+    <state width="2517" height="252" key="GridCell.Tab.1.bottom/313.-1080.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1600336278601" />
+    <state width="1396" height="343" key="GridCell.Tab.1.center" timestamp="1600673075464">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1396" height="343" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1600673075464" />
+    <state width="1877" height="289" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600255110484" />
+    <state width="1236" height="289" key="GridCell.Tab.1.center/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1600251303678" />
+    <state width="2094" height="409" key="GridCell.Tab.1.center/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1598832983094" />
+    <state width="2094" height="409" key="GridCell.Tab.1.center/0.23.2560.1348/-1080.-446.1080.2537@0.23.2560.1348" timestamp="1598841402999" />
+    <state width="2517" height="252" key="GridCell.Tab.1.center/313.-1080.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1600336278601" />
+    <state width="1396" height="343" key="GridCell.Tab.1.left" timestamp="1600673075464">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1396" height="343" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1600673075464" />
+    <state width="1877" height="289" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600255110484" />
+    <state width="1236" height="289" key="GridCell.Tab.1.left/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1600251303678" />
+    <state width="2094" height="409" key="GridCell.Tab.1.left/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1598832983094" />
+    <state width="2094" height="409" key="GridCell.Tab.1.left/0.23.2560.1348/-1080.-446.1080.2537@0.23.2560.1348" timestamp="1598841402998" />
+    <state width="2517" height="252" key="GridCell.Tab.1.left/313.-1080.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1600336278600" />
+    <state width="1396" height="343" key="GridCell.Tab.1.right" timestamp="1600673075464">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1396" height="343" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1600673075464" />
+    <state width="1877" height="289" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600255110484" />
+    <state width="1236" height="289" key="GridCell.Tab.1.right/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1600251303678" />
+    <state width="2094" height="409" key="GridCell.Tab.1.right/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1598832983096" />
+    <state width="2094" height="409" key="GridCell.Tab.1.right/0.23.2560.1348/-1080.-446.1080.2537@0.23.2560.1348" timestamp="1598841402999" />
+    <state width="2517" height="252" key="GridCell.Tab.1.right/313.-1080.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1600336278601" />
+    <state width="2517" height="348" key="GridCell.Tab.2.bottom" timestamp="1600220510667">
+>>>>>>> Stashed changes
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="2517" height="348" key="GridCell.Tab.2.bottom/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1599208794797" />
@@ -396,8 +514,17 @@
     <state x="850" y="308" key="git4idea.merge.GitPullDialog" timestamp="1598230305716">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
+<<<<<<< Updated upstream
     <state x="850" y="308" key="git4idea.merge.GitPullDialog/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598230305716" />
     <state x="936" y="240" key="run.anything.popup" timestamp="1599203615170">
+=======
+    <state x="850" y="308" key="git4idea.merge.GitPullDialog/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1600068683756" />
+    <state x="540" y="224" key="new project wizard" timestamp="1600675649493">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="540" y="224" key="new project wizard/0.0.1792.1120@0.0.1792.1120" timestamp="1600675649493" />
+    <state x="936" y="240" key="run.anything.popup" timestamp="1600328003856">
+>>>>>>> Stashed changes
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="936" y="240" key="run.anything.popup/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1599203615170" />
