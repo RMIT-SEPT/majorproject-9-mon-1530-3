@@ -43,7 +43,7 @@ class Nav extends Component {
               </ul>
             </div>
             <div id="navlinks">
-              <a href="/home">home</a>
+              <a href="/login">home</a>
               <a href="/about">about us</a>
               <a href="/CreateBooking_Service">book</a>
             </div>

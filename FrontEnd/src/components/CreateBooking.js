@@ -66,7 +66,7 @@ export class CreateBooking extends Component {
     }, this);
 
     this.state = {
-      customerID: "",
+      customerID: "1", //temporary
       employeeID: this.props.employeeID,
       date: "",
       time: "",
@@ -110,8 +110,9 @@ export class CreateBooking extends Component {
     if (bookingID) {
       console.log(bookingID);
       ReactDOM.render(
+        <div>
         <div style={{ background: "white", color: "black" }}>
-          <h2 className="header">
+          <h2>
             Thank you,
             <br />
             your booking number is:
@@ -125,15 +126,16 @@ export class CreateBooking extends Component {
           <br />
           <a className="button" href="/index">
             return home
-          </a>
+          </a></div>
         </div>,
         document.getElementById("booking")
       );
     } else {
       console.log("error");
       ReactDOM.render(
-        <div>
-          <h2 className="header">
+        <div style={{ background: "white", color: "black" }}>
+        <div style={{ background: "white", color: "black" }}>
+          <h2>
             Booking failed,
             <br />
             please try again;
@@ -143,7 +145,7 @@ export class CreateBooking extends Component {
           <a className="button" href="/CreateBooking">
             reset
           </a>
-        </div>,
+        </div></div>,
         document.getElementById("booking")
       );
     }
@@ -161,9 +163,7 @@ export class CreateBooking extends Component {
             <h4>Create Booking:</h4>
             <div className = "form">
             <form onSubmit={this.onSubmit}>
-            <div className = "form-group"><h5>User ID: (no ID? create account<a href="/Register"> here</a>)</h5>
-                <input style={formStyle} type = "number" className = "form-control form-control-lg "
-                    placeholder = "Unique user ID" name = "customerID" value = {this.state.customerID}  onChange = {this.onChange} />
+            <div className = "form-group"><h5>(no ID? create account<a href="/Register"> here</a>)</h5>
             </div>
             <div className = "form-group"><h5>Requested date:</h5>
                 <input style={formStyle} type = "date" className = "form-control form-control-lg " min={this.props.today}
