@@ -4,11 +4,11 @@ INSERT into Customer (username,first_Name,last_Name,email) VALUES
     ('FOREMAN', 'Max', 'Foreman', 'max.foreman@email.com'),
     ('HOLMES', 'Jessie', 'Holmes', 'jessie@holmes@email.com');
 
-INSERT into Employee (username,first_Name,last_Name,email,admin) VALUES
-    ('CHADWICK', 'Marisa', 'Chadwick','chadwick@work.com',true),
-    ('FENTON', 'Rick', 'Fenton','fenton@work.com',false),
-    ('WRIGHT', 'Rylee', 'Wright','wright@work.com',false),
-    ('CLARKSON', 'Katelyn', 'Clarkson','clarkson@work.com',true);
+INSERT into Employee (username,service,first_Name,last_Name,email,admin,start_Time,end_Time,employeeID) VALUES
+    ('CHADWICK','hairdressing' ,'Marisa', 'Chadwick','chadwick@work.com',true,'09:30:00','17:30:00','1'),
+    ('FENTON', 'nails','Rick', 'Fenton','fenton@work.com',false,'08:00:00','16:00:00','2'),
+    ('WRIGHT', 'hairdressing','Rylee', 'Wright','wright@work.com',false,'09:00:00','17:00:00','3'),
+    ('CLARKSON', 'nails','Katelyn', 'Clarkson','clarkson@work.com',true,'15:00:00','21:00:00','4');
 
 INSERT into Booking (bookingID, customerID, employeeID, confirmed, date) VALUES
     ('1','1234', '9923', 'True','2020-08-03'),

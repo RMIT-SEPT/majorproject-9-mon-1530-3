@@ -45,7 +45,7 @@ class Nav extends Component {
             <div id="navlinks">
               <a href="/home">home</a>
               <a href="/about">about us</a>
-              <a href="/book">book</a>
+              <a href="/CreateBooking_Service">book</a>
             </div>
             <a href="/">
               <img src={logo} alt="booqing logo"></img>

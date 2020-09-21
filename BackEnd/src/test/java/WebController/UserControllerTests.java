@@ -42,7 +42,7 @@ public class UserControllerTests {
 
     @Test
     public void testLoginExistingUser() throws Exception{
-        User testUser = new User("Liam2020", "1234", "customer");
+        User testUser = new User();
         userRepository.save(testUser);
 
         mockMVC.perform(post("/api/user/login").contentType(MediaType.APPLICATION_JSON)
@@ -69,7 +69,7 @@ public class UserControllerTests {
 
     @Test
     public void testCorrectUserTypeReturn() throws Exception{
-        User testUser = new User("Liam2020", "1234", "employee");
+        User testUser = new User();
         userRepository.save(testUser);
 
         mockMVC.perform(post("/api/user/login").contentType(MediaType.APPLICATION_JSON)
@@ -81,7 +81,7 @@ public class UserControllerTests {
 
     @Test
     public void testIncorrectPassword() throws Exception{
-        User testUser = new User("Liam2020", "1234", "customer");
+        User testUser = new User();
         userRepository.save(testUser);
 
         MvcResult mvcResult = mockMVC.perform(post("/api/user/login").contentType(MediaType.APPLICATION_JSON)
@@ -97,7 +97,7 @@ public class UserControllerTests {
 
     @Test
     public void testIncorrectUsername() throws Exception{
-        User testUser = new User("Liam2020", "1234", "customer");
+        User testUser = new User();
         userRepository.save(testUser);
 
         MvcResult mvcResult = mockMVC.perform(post("/api/user/login").contentType(MediaType.APPLICATION_JSON)

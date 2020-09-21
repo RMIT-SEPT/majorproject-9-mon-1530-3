@@ -50,7 +50,7 @@ export default class CreateBooking_Service extends Component {
         let allStaff = await getAllStaff();
         let newServices = ["No available services.."];
         let newStaff = ["No available staff.."];
-
+        console.log(allStaff);
         for(var i = 0; i < allStaff.length; i++){
 
             newStaff.push(allStaff[i].firstName + " " + allStaff[i].lastName);
@@ -92,7 +92,7 @@ export default class CreateBooking_Service extends Component {
 
     render() {
         var allServicesElement = this.state.services.map((service) => <option key = {service} value = {service}>{service}</option>)
-        const formStyle = {color:'black', fontSize:'small',width:'100%'};
+        const formStyle = {color:'white', fontSize:'small',width:'100%'};
         return (
             <div id = 'booking'>
             <h3>Select service:</h3>
