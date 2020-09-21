@@ -14,9 +14,5 @@ public class CustomerService {
         return customerRepository.save(customer);
     }
 
-    //Checks for existing username
-    public boolean checkUsername(Customer customer){
-        return customerRepository.existsByUsername(customer.getUsername());
-    }
 
 }

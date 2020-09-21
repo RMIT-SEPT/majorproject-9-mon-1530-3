@@ -11,8 +11,7 @@ import java.util.Date;
 public class Customer {
 
     @Id
-    @Column(unique = true)
-    private String username;
+    private Long customerID;
 
     @Email
     private String email;
@@ -27,8 +26,8 @@ public class Customer {
     @JsonFormat(pattern = "dd-mm-yyyy")
     private Date updated_At;
 
-    @Transient
-    private String password;
+    public Customer() {
+    }
 
     public String getFirstName() {
         return firstName;
@@ -38,23 +37,29 @@ public class Customer {
         this.firstName = firstName;
     }
 
-    public String getUsername() {return username;}
-
-    public void setUsername(String username) {this.username = username;}
-
     public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) { this.lastName = lastName; }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public Long getCustomerID() {
+        return customerID;
+    }
+
+    public void setCustomerID(Long customerID) {
+        this.customerID = customerID;
+    }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) { this.email = email; }
-
-    public String getPassword() { return password; }
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public Date getCreated_At() {
         return created_At;

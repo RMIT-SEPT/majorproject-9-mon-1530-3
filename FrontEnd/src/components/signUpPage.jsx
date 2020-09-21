@@ -1,98 +1,28 @@
 import React, { Component } from "react";
-import {signUp} from "../actions/SignUpActions";
-import Logo from "./Layout/Logo";
 
 class Register extends Component {
-  constructor() {
-      super();
-
-      this.state = {
-          firstName: "",
-          lastName: "",
-          email: "",
-          username: "",
-          password: "",
-          userType: "",
-          admin:""
-      };
-      this.onChange = this.onChange.bind(this);
-      this.onSubmit = this.onSubmit.bind(this);
-  }
-
-  onChange(event){
-      this.setState({[event.target.name]: event.target.value});
-  }
-
-  async onSubmit(event){
-      event.preventDefault();
-
-      if (this.state.userType === "admin"){
-          console.log("ADMIN!!!")
-          this.state.userType = "employee"
-          this.state.admin = true
-      }
-
-      const user = {
-          "firstName": this.state.firstName,
-          "lastName": this.state.lastName,
-          "email": this.state.email,
-          "username": this.state.username,
-          "password": this.state.password,
-          "admin": this.state.admin
-      }
-
-      let valid = await signUp(user, this.state.userType)
-      if (valid === "username"){
-          alert("Error: User already exists with that username")
-      } else{
-          window.location.href = '/login';
-      }
-  }
-
-
+  state = {};
   render() {
     return (
-      <div id="signContent">
-        <div className="logo"><Logo /></div>
-        <div className="signs">
-        <form onSubmit={this.onSubmit}>
-
-            <input className="input" name="firstName"
-            placeholder="first name."
-            value={this.state.firstName}
-            onChange={this.onChange} /><br></br>
-
-            <input className="input" name="lastName"
-            placeholder="last name."
-            value={this.state.lastName}
-            onChange={this.onChange}/><br></br>       
-
-            <input className="input" name="username"
-            placeholder="username."
-            value={this.state.username}
-            onChange={this.onChange} required/><br></br>
-
-            <input className="input"type="password"
-            name="password"
-            placeholder="password."
-            value={this.state.password}
-            onChange={this.onChange} required/><br></br>
-
-            <input className="input" name="email"
-            placeholder="email."
-            value={this.state.email}
-            onChange={this.onChange}/><br></br>
-
-            <input className="input" name="phone"
-            placeholder="phone number."/><br></br>
-
-            <input type="hidden" id="customer" name="userType"
-                   value="customer" checked={this.state.userType === "customer"}
-                   onChange={this.onChange} />
-            <input type="submit" className="submit" value="register."/>
-          </form>
-          <a href="/login">sign in instead?</a>
-          </div>
+      <div>
+          <a className="navbar-link" href="/login">Login</a>
+        <h1>CREATE A NEW ACCOUNT</h1>
+        <br></br>
+        <h5>First name</h5>
+        <input class="input" />
+        <h5>Last name</h5>
+        <input class="input"/>
+        <h5>Email address</h5>
+        <input class="input"/>
+        <h5>Username</h5>
+        <input class="input"/>
+        <h5>Password</h5>
+        <input class="input"type="password" />
+        <h5>Country</h5>
+        <input />
+        <br></br>
+        <br></br>
+        <button className="btn btn-primary btn-sm">Create Account</button>
       </div>
     );
   }

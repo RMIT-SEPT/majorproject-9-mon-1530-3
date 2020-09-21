@@ -1,9 +1,7 @@
 package com.rmit.group3.spring.webController;
 
 import com.rmit.group3.spring.model.Employee;
-import com.rmit.group3.spring.model.User;
 import com.rmit.group3.spring.service.EmployeeService;
-import com.rmit.group3.spring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,10 +22,7 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
-    @Autowired
-    private UserService userService;
-
-    @PostMapping("/create")
+    @PostMapping("")
     public ResponseEntity<?> createNewEmployee(@Valid @RequestBody Employee employee, BindingResult result)
     {
         if(result.hasErrors()){
@@ -38,9 +33,6 @@ public class EmployeeController {
             }
 
         }
-
-        User newUser = userService.createFromEmployee(employee);
-
         Employee employee1 = employeeService.saveOrUpdateEmployee(employee);
         return new ResponseEntity<>(employee, HttpStatus.CREATED);
     }

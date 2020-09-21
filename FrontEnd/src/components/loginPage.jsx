@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import {userLogin} from "../actions/LoginActions";
-import Logo from "./Layout/Logo"
 
 class Login extends Component {
     constructor() {
@@ -25,49 +24,41 @@ class Login extends Component {
         const user = {
             "username":this.state.username,
             "password":this.state.password,
-            "userType":"customer"
+            "userType":"Customer"
         }
-
+        console.log(user)
         let valid = await userLogin(user)
 
         if (valid){
-            localStorage.setItem('userType', valid["userType"])
-            localStorage.setItem('username',this.state.username);
-            localStorage.setItem('logged',true);
-            console.log(sessionStorage.getItem('username'));
-            console.log(sessionStorage.getItem('userType'));
-            console.log(sessionStorage.getItem('logged'));
-            alert("User, " + sessionStorage.getItem('username') + " is now logged in")
-            window.location.replace("/");
+            console.log("User Found :)")
         } else{
-            console.log("user not found!")
+            console.log("User Not Found!")
         }
     }
 
   render() {
     return (
-      <div id="signContent">
-          <div className="logo"><Logo /></div>
-          <br></br>
-          <div className="signs">
+      <div>
+          <a className="navbar-link" href="/register">Register</a>
+          <h1>Login Page</h1>
           <form onSubmit={this.onSubmit}>
-              <input className="input" name="username"
-                     placeholder="username."
+              <br></br>
+              <input class="input" name="username"
+                     placeholder="Username"
                      value={this.state.username}
-                     onChange={this.onChange} required
+                     onChange={this.onChange}
               />
               <br></br>
-              <input className="input" name="password"
-                     placeholder="password."
+              <input class="input" name="password"
+                     placeholder="Password"
                      type="password"
                      value={this.state.password}
-                     onChange={this.onChange} required
+                     onChange={this.onChange}
               />
               <br></br>
-              <input className="submit" type="submit" value="login."/>
+              <br></br>
+              <input type="submit" className="btn btn-primary btn-sm"/>
           </form>
-          <a href="/register">sign up instead?</a>
-          </div>
       </div>
     );
   }
