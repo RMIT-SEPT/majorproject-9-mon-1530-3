@@ -86,9 +86,19 @@ class Register extends Component {
             <input className="input" name="phone"
             placeholder="phone number."/><br></br>
 
-            <input type="hidden" id="customer" name="userType"
+            <h5>Account Type</h5>
+            <input type="radio" id="customer" name="userType"
                    value="customer" checked={this.state.userType === "customer"}
                    onChange={this.onChange} />
+            <label htmlFor="customer">Customer</label><br/>
+            <input type="radio" id="employee" name="userType"
+                   value="employee" checked={this.state.userType === "employee"}
+                   onChange={this.onChange}/>
+            <label htmlFor="employee">Employee</label><br/>
+            <input type="radio" id="admin" name="userType"
+                   value="admin" checked={this.state.userType === "admin"}
+                   onChange={this.onChange}/>
+            <label htmlFor="admin">Admin</label>
             <input type="submit" className="submit" value="register."/>
           </form>
           <a href="/login">sign in instead?</a>
