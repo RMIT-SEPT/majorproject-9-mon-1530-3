@@ -1,6 +1,6 @@
 # RMIT SEPT 2020 Major Project
 
-# Group 00
+# Group 03
 
 ## Members
 * BALGOS, Aren Carter (s3728738)
@@ -17,4 +17,5 @@
 
 ## Code documentation
 
-[Quick Start](/docs/README.md) in `docs` folder
+All documentation for sprints, screenshots, communication and contribution forms:
+https://drive.google.com/drive/folders/1P4HNyMqKs1y1j_hB3r9MMvxLpA8b3ebI?usp=sharing
