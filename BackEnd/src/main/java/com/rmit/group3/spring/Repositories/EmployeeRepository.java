@@ -5,7 +5,7 @@ import com.rmit.group3.spring.model.Employee;
 
 public interface EmployeeRepository extends CrudRepository<Employee,Long>{
 
+    Employee findByEmployeeID(Long employeeID);
     @Override
-    Iterable<Employee> findAllById(Iterable<Long> iterable);
-
+    Iterable<Employee> findAll();
 }

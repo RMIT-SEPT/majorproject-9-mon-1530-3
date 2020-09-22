@@ -35,14 +35,18 @@ public class UserController {
 
         }
 
+        //See if login success
         boolean loginUser = userService.login(user);
 
-        /*HttpHeaders headers = new HttpHeaders();
-        headers.add("Access-Control-Allow-Origin", "http://localhost:3000");
-        headers.add("Access-Control-Allow-Credentials", "true");*/
+        if (loginUser){
+            //Get user type
+            User returnUser = userService.getUserType(user.getUsername());
+            return new ResponseEntity<>(returnUser,HttpStatus.ACCEPTED);
+        }
 
-        return new ResponseEntity<>(loginUser, HttpStatus.ACCEPTED);
+        return new ResponseEntity<>(false,HttpStatus.ACCEPTED);
+
+
+
     }
-
-
 }
