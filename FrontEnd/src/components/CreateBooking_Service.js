@@ -6,11 +6,28 @@ export default class CreateBooking_Service extends Component {
 
     constructor(){
         super();
+this.onChange = this.onChange.bind(this);   
+         //set min booking date to today
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0
+    var yyyy = today.getFullYear();
+    if (dd < 10) {
+      dd = "0" + dd;
+    }
+    if (mm < 10) {
+      mm = "0" + mm;
+    }
+
+    today = yyyy + "-" + mm + "-" + dd;
+
 
         this.state = {
             services:[""],
             AllStaffDetails:[""],
-            staff: [<option>please first select a service..</option>]
+            staff: [<option>please first select a service..</option>],
+            date:"",
+            today:today
         };
         this.getServices = this.getServices.bind(this);
         this.getStaff = this.getStaff.bind(this);
@@ -35,7 +52,7 @@ export default class CreateBooking_Service extends Component {
                 }
             }
 
-            ReactDOM.render(<CreateBooking employeeID = {id} startTime = {startTime} endTime = {endTime}/>,document.getElementById('booking'));
+            ReactDOM.render(<CreateBooking employeeID = {id} startTime = {startTime} endTime = {endTime} date = {this.state.date}/>,document.getElementById('booking'));
 
         }
         else{
@@ -44,6 +61,9 @@ export default class CreateBooking_Service extends Component {
 
     }
     }
+    onChange(e) {
+        this.setState({ [e.target.name]: e.target.value });
+      }
 
     async getServices() {
 
@@ -105,6 +125,8 @@ export default class CreateBooking_Service extends Component {
                 <select id ='staffSelect' style={formStyle} defaultValue="">
                     {this.state.staff}
                 </select>
+                <input style={{color:'black', fontSize:'small',width:'100%'}} type = "date" className = "form-control form-control-lg " min={this.state.today}
+                    placeholder = "Requested booking date" name = "date" value = {this.state.date} onChange = {this.onChange}/>
                 <br/>
                 <br/>
                <input className = "btn btn-primary btn-block mt-4" type = "submit"></input>

@@ -8,20 +8,7 @@ export class CreateBooking extends Component {
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     console.log(this.props.employeeID);
-    //set min booking date to today
-    var today = new Date();
-    var dd = today.getDate();
-    var mm = today.getMonth() + 1; //January is 0
-    var yyyy = today.getFullYear();
-    if (dd < 10) {
-      dd = "0" + dd;
-    }
-    if (mm < 10) {
-      mm = "0" + mm;
-    }
-
-    today = yyyy + "-" + mm + "-" + dd;
-
+   
     const startTime = new Date("Jan 01, 1970 " + this.props.startTime);
     const endTime = new Date("Jan 01, 1970 " + this.props.endTime);
 
@@ -41,7 +28,7 @@ export class CreateBooking extends Component {
               key={time.getHours() + ":00"}
               value={time.getHours() + ":00"}
             />
-            <label style={{ background: "white", color: "black" }}>
+            <label>
               {time.getHours() + ":00"}
             </label>
           </div>
@@ -57,7 +44,7 @@ export class CreateBooking extends Component {
               key={time.getHours() + ":" + time.getMinutes()}
               value={time.getHours() + ":" + time.getMinutes()}
             />
-            <label style={{ background: "white", color: "black" }}>
+            <label>
               {time.getHours() + ":" + time.getMinutes()}
             </label>
           </div>
@@ -68,11 +55,10 @@ export class CreateBooking extends Component {
     this.state = {
       customerID: "1", //temporary
       employeeID: this.props.employeeID,
-      date: "",
+      date: this.props.date,
       time: "",
       confirmed: "",
       timeSlots: timeSlotOptions,
-      today: today,
     };
   }
 
@@ -153,23 +139,19 @@ export class CreateBooking extends Component {
 
   render() {
 
-    const formStyle = {color:'black', fontSize:'small',width:'100%'};
     return (
         <div>
         <div id = 'booking'> 
 
             <h4> <a href = "/CreateBooking_Service">back to pick service</a> </h4>
 
-            <h4>Create Booking:</h4>
+            <h4>Create Booking for {this.props.date}:</h4>
             <div className = "form">
             <form onSubmit={this.onSubmit}>
             <div className = "form-group"><h5>(no ID? create account<a href="/Register"> here</a>)</h5>
             </div>
-            <div className = "form-group"><h5>Requested date:</h5>
-                <input style={formStyle} type = "date" className = "form-control form-control-lg " min={this.props.today}
-                    placeholder = "Requested booking date" name = "date" value = {this.state.date} onChange = {this.onChange}/>
-               <br/>
-               <div style={{width:'100%'}}>
+            <div className = "form-group">
+               <div style={{width:'100%'}} class="radio-toolbar">
                     <div style={{float:"left"}}>{this.state.timeSlots.slice(0,this.state.timeSlots.length/2)}</div>
                     <div style={{float:"right"}}>{this.state.timeSlots.slice(this.state.timeSlots.length/2,this.state.timeSlots.length)}</div>
                </div>
