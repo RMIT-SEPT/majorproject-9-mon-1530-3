@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import ReactDOM from "react-dom";
-import {getAllStaff} from '../actions/bookingActions';
-import {CreateBooking} from './CreateBooking';
+import {getAllStaff,getAllBookings} from '../actions/bookingActions';
+import { CreateBooking } from './CreateBooking';
 export default class CreateBooking_Service extends Component {
 
     constructor(){
         super();
-this.onChange = this.onChange.bind(this);   
+        this.onChange = this.onChange.bind(this);
          //set min booking date to today
     var today = new Date();
     var dd = today.getDate();
@@ -27,7 +27,8 @@ this.onChange = this.onChange.bind(this);
             AllStaffDetails:[""],
             staff: [<option>please first select a service..</option>],
             date:"",
-            today:today
+            today:today,
+            existingBookings:[""]
         };
         this.getServices = this.getServices.bind(this);
         this.getStaff = this.getStaff.bind(this);
@@ -52,7 +53,7 @@ this.onChange = this.onChange.bind(this);
                 }
             }
 
-            ReactDOM.render(<CreateBooking employeeID = {id} startTime = {startTime} endTime = {endTime} date = {this.state.date}/>,document.getElementById('booking'));
+            ReactDOM.render(<CreateBooking existingBookings={this.state.existingBookings} employeeID = {id} startTime = {startTime} endTime = {endTime} date = {this.state.date}/>,document.getElementById('booking'));
 
         }
         else{
@@ -68,9 +69,9 @@ this.onChange = this.onChange.bind(this);
     async getServices() {
 
         let allStaff = await getAllStaff();
+        let allBookings = await getAllBookings();
         let newServices = ["No available services.."];
         let newStaff = ["No available staff.."];
-        console.log(allStaff);
         for(var i = 0; i < allStaff.length; i++){
 
             newStaff.push(allStaff[i].firstName + " " + allStaff[i].lastName);
@@ -82,7 +83,7 @@ this.onChange = this.onChange.bind(this);
         if(newServices.length > 1){
             newServices.shift();
         }
-        this.setState({services:newServices, staff:newStaff, AllStaffDetails:allStaff});
+        this.setState({services:newServices, staff:newStaff, AllStaffDetails:allStaff, existingBookings:allBookings});
 
     }
 
