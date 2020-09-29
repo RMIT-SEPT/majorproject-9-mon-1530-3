@@ -23,16 +23,9 @@ export const PopupMenu = [
   },
 
   {
-    title: "edit employees.",
-    url: "#",
+    title: "edit employees,roster & services.",
+    url: "/employeeList",
     cName: "nav-links",
   },
-
-  {
-    title: "edit services.",
-    url: "#",
-    cName: "nav-links",
-  },
-
   
 ];

@@ -19,7 +19,7 @@ public class EmployeeService {
         }
         catch(Exception e)
         {
-            throw new EmployeeException("Employee " + employee.getEmployeeID() + " already exists");
+            throw new EmployeeException("Employee " + employee.getEmployeeID() + " has error in updating");
         }
     }
 

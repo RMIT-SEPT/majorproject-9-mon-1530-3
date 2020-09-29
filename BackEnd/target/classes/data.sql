@@ -9,7 +9,7 @@ INSERT into Employee (username,service,first_Name,last_Name,email,admin,start_Ti
     ('FENTON', 'nails','Rick', 'Fenton','fenton@work.com',false,'08:00:00','16:00:00','2'),
     ('WRIGHT', 'hairdressing','Rylee', 'Wright','wright@work.com',false,'09:00:00','17:00:00','3'),
     ('CLARKSON', 'nails','Katelyn', 'Clarkson','clarkson@work.com',true,'15:00:00','21:00:00','4'),
-    ('ANDERSON', 'Grooming','Harry', 'Anderson','Handerson@work.com',true,'15:00:00','21:00:00','4');
+    ('ANDERSON', 'Grooming','Harry', 'Anderson','Handerson@work.com',true,'15:00:00','21:00:00','5');
 
 INSERT into Booking (bookingID, customerID, employeeID, confirmed, date, time) VALUES
     ('1','1234', '9923', 'True','2020-08-03','09:30:00'),
