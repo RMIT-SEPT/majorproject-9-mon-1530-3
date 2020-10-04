@@ -17,7 +17,7 @@ export default class EditEmployee_List extends Component {
             email:"",
             service:"",
             endTime:"",
-            starTime:"",
+            startTime:"",
             admin:false
         }
 
@@ -28,6 +28,8 @@ export default class EditEmployee_List extends Component {
         this.onChange = this.onChange.bind(this);
         this.updateService = this.updateService.bind(this);
         this.updateEmployeeAction = this.updateEmployeeAction.bind(this);
+        this.rosterForm = this.rosterForm.bind(this);
+        this.updateRoster = this.updateRoster.bind(this);
     }
 
     async getEmployees(){
@@ -97,14 +99,16 @@ export default class EditEmployee_List extends Component {
 
     }
 
-    async updateEmployeeAction(employee){
+    async updateEmployeeAction(){
 
+        if(document.getElementById('action').value == "Edit Employee detail or Service"){
         let adminResult = document.getElementById('admin').value
         console.log(adminResult)
         var adminBool = false;
         if(adminResult == 'Yes'){
             adminBool = true;
         }
+    }
 
         const updatedEmployee = {
             
@@ -181,6 +185,42 @@ export default class EditEmployee_List extends Component {
         </div>);
     }
 
+    updateRoster(e){
+        e.preventDefault()
+
+        console.log(this.state.startTime)
+        console.log(this.state.endTime)
+
+        this.updateEmployeeAction()
+    }
+
+    rosterForm(){
+        const labelStyle = {fontSize:'small',width:'50%',float:'left'};
+        const inputStyle = {fontSize:'small', width:'50%',float:'right',backgroundColor:'white',color:'black'};
+        
+        return (
+            <div>
+            <br></br>
+            <label style={{fontSize:'medium'}}>Start and finish times for employee's working week:</label>
+            <br></br>
+        <form onSubmit = {this.updateRoster}>
+
+        <label style = {labelStyle}>Start time:</label>
+        <input type="time" name="startTime" style ={inputStyle} max={this.state.endTime} defaultValue = {this.state.startTime} onChange={this.onChange} step="2"></input>
+
+        <br></br>
+        <label style = {labelStyle}>End time:</label>
+        <input type="time" name="endTime" style ={inputStyle} min={this.state.startTime} defaultValue = {this.state.endTime} onChange={this.onChange} step="2"></input>
+
+        <br></br>
+        <input className = "btn btn-primary btn-block mt-4" type = "submit" value="Save"></input>
+        
+        </form>
+        </div>
+        );
+
+    }
+
 
     render() {
 
@@ -207,8 +247,9 @@ export default class EditEmployee_List extends Component {
                 <input className = "btn btn-primary btn-block mt-4" type = "submit" value="Continue"></input>
                 </form>
                 {this.state.showServicesForm ? this.ServicesForm() : null}
+                {this.state.showRosterForm ? this.rosterForm() : null}
                 <br></br>
-           
+
                 </div>
             </div>
         )

@@ -21,9 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="57280a33-6cac-4ca6-8464-e1b884fcf9b4" name="Default Changelist" comment="Fixed CORS error">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/model/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/webController/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/webController/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/actions/EmployeeActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/actions/EmployeeActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/src/components/EditEmployee_List.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/components/EditEmployee_List.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
