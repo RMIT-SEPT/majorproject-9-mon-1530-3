@@ -4,6 +4,7 @@ import com.rmit.group3.spring.service.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.BeanIds;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -18,6 +19,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import static com.rmit.group3.spring.security.SecurityConstants.CUSTOMER_SIGNUP;
 import static com.rmit.group3.spring.security.SecurityConstants.EMPLOYEE_SIGNUP;
 import static com.rmit.group3.spring.security.SecurityConstants.H2_URL;
+import static com.rmit.group3.spring.security.SecurityConstants.USER_LOGIN;
 
 @Configuration
 @EnableWebSecurity
@@ -39,7 +41,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
-        authenticationManagerBuilder.userDetailsService(customUserDetailsService).passwordEncoder(bCryptPasswordEncoder);
+        authenticationManagerBuilder.userDetailsService(customUserDetailsService)
+                .passwordEncoder(bCryptPasswordEncoder);
     }
 
     @Override
@@ -60,7 +63,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
-                .headers().frameOptions().sameOrigin() //To enable H2 Database
+                .headers().frameOptions().sameOrigin()
                 .and()
                 .authorizeRequests()
                 .antMatchers(
@@ -72,11 +75,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         "/**/*.jpg",
                         "/**/*.html",
                         "/**/*.css",
-                        "/**/*.js"
-                ).permitAll()
+                        "/**/*.js").permitAll()
+                .antMatchers(H2_URL).permitAll()
                 .antMatchers(CUSTOMER_SIGNUP).permitAll()
                 .antMatchers(EMPLOYEE_SIGNUP).permitAll()
-                .antMatchers(H2_URL).permitAll()
+                .antMatchers(USER_LOGIN).permitAll()
                 .anyRequest().authenticated();
 
         http.addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
