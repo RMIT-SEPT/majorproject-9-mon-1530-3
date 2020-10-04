@@ -52,6 +52,32 @@ public class EmployeeController {
         return new ResponseEntity<Employee>(employee1,HttpStatus.OK);
     }
 
+    @PostMapping("/update")
+    public ResponseEntity<?> updateExistingEmployee(@Valid @RequestBody Employee employee, BindingResult result)
+    {
+
+        if(result.hasErrors()){
+            Map<String,String> errorMap = new HashMap<>();
+
+            for(FieldError error:result.getFieldErrors()){
+                return new ResponseEntity<List<FieldError>>(result.getFieldErrors(), HttpStatus.BAD_REQUEST);
+            }
+
+        }
+
+        Employee employeeOld = employeeService.findEmployeeByID(employee.getEmployeeID());
+
+        if(employeeOld.getEmployeeID() == employee.getEmployeeID()){
+
+            Employee employeeNew = employeeService.saveOrUpdateEmployee(employee);
+            return new ResponseEntity<>(true,HttpStatus.OK);
+
+        }
+
+        return new ResponseEntity<>(false,HttpStatus.NOT_MODIFIED);
+
+    }
+
     @GetMapping("/all")
     public Iterable<Employee> getAllEmployees(){return employeeService.getAllEmployees();}
 

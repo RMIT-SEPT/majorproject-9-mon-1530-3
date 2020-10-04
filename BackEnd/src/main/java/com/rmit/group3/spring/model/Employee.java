@@ -41,7 +41,7 @@ public class Employee {
 
     @NotBlank(message = "service detail required")
     private String service;
-    
+
     private Time startTime;
 
     private Time endTime;
