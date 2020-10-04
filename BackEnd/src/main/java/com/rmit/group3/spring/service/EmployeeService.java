@@ -34,5 +34,18 @@ public class EmployeeService {
 
     public Iterable<Employee> getAllEmployees(){return employeeRepository.findAll();}
 
+    public boolean deleteEmployeeByID(Long employeeID){
+
+        Employee employee = employeeRepository.findByEmployeeID(employeeID);
+
+        if (employee == null) {
+            return false;
+        }
+        else {
+            employeeRepository.delete(employee);
+            return true;
+        }
+    }
+
 
 }

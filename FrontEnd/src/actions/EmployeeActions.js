@@ -16,3 +16,23 @@ export async function getAllEmployees(){
     }
 
 }
+
+export async function removeEmployee(employee){
+
+    try{
+        return await axios.post("http://localhost:8080/api/employee/delete",employee)
+        .then(async function(response){
+
+            return response.data
+        })
+        .catch(error => {return error})
+
+    }
+    catch(err){
+        return {
+            type:GET_ERRORS,
+            payload:err.response.data
+        }
+    }
+
+}

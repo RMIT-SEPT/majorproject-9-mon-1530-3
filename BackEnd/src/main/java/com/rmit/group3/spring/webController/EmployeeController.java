@@ -54,4 +54,14 @@ public class EmployeeController {
 
     @GetMapping("/all")
     public Iterable<Employee> getAllEmployees(){return employeeService.getAllEmployees();}
+
+    @PostMapping("/delete")
+    public ResponseEntity<Boolean> deleteEmployeeByID(@Valid @RequestBody Employee employee){
+
+        Boolean deleted = employeeService.deleteEmployeeByID(employee.getEmployeeID());
+
+        return new ResponseEntity<>(deleted, HttpStatus.ACCEPTED);
+
+
+    }
 }

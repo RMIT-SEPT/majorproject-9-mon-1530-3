@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {getAllEmployees} from '../actions/EmployeeActions';
+import {getAllEmployees,removeEmployee} from '../actions/EmployeeActions';
 
 export default class EditEmployee_List extends Component {
 
@@ -27,20 +27,37 @@ export default class EditEmployee_List extends Component {
     onSubmit(e){
         e.preventDefault();
         var employeeID = document.getElementById('employeeSelect').value
-        var currentEmployee = [];
+        var currentEmployee = {};
         
         this.state.employees.forEach((employee) =>{
 
             if(employee.employeeID === parseInt(employeeID)){
                 
                 currentEmployee = employee;
-
             }
         })
 
         var action = document.getElementById('action').value
         //Placeholder action:
-        alert("you choose to " + action + " for " + currentEmployee.firstName + " " + currentEmployee.lastName)
+        console.log(action)
+        if(action == "Remove Employee")
+        {
+            this.deleteEmployee(currentEmployee)
+        }
+
+    }
+
+    async deleteEmployee(employee){
+
+        if(removeEmployee(employee)){
+            
+            alert("employee deleted")
+            window.location.reload(false);
+        }
+        else{
+            alert("Error in deleting")
+        }
+        return true;
 
     }
 
