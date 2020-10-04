@@ -42,11 +42,8 @@ public class Employee {
     @NotBlank(message = "service detail required")
     private String service;
 
-
-    @NotBlank(message = "need start time")
     private Time startTime;
 
-    @NotBlank(message = "need finish time")
     private Time endTime;
 
     public Date getEndTime() {

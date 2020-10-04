@@ -7,12 +7,15 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.sql.Time;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.Date;
 
 @Entity
 public class Booking {
 
-    public Booking(@NotNull long customerID, @NotNull long employeeID, Date date, Time time, boolean confirmed) {
+    public Booking(@NotNull long customerID, @NotNull long employeeID, LocalDate date, LocalTime time, boolean confirmed) {
         this.customerID = customerID;
         this.employeeID = employeeID;
         this.date = date;
@@ -31,11 +34,11 @@ public class Booking {
     @NotNull
     private long employeeID;
 
-    @JsonFormat(pattern = "yyyy-mm-dd")
-    private Date date;
+    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "yyyy-MM-dd")
+    private LocalDate date;
 
-    @JsonFormat(pattern = "HH:mm")
-    private Time time;
+    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "HH:mm:ss")
+    private LocalTime time;
 
     private boolean confirmed;
 
@@ -45,12 +48,12 @@ public class Booking {
     @JsonFormat(pattern = "yyyy-mm-dd")
     private Date updated_At;
 
-    public Time getTime() {
+    public LocalTime getTime() {
         return time;
     }
 
-    public void setTime(Date time) {
-        this.time = new Time(time.getTime());
+    public void setTime(LocalTime time) {
+        this.time = time;
     }
 
     public boolean isConfirmed() {
@@ -105,11 +108,11 @@ public class Booking {
     public void setEmployeeID(long employeeID) {
         this.employeeID = employeeID; }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
