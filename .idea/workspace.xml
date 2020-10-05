@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="57280a33-6cac-4ca6-8464-e1b884fcf9b4" name="Default Changelist" comment="Fixed CORS error">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/components/EditEmployee_List.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/components/EditEmployee_List.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,6 +177,7 @@
       <workItem from="1600672772413" duration="2781000" />
       <workItem from="1601261029113" duration="5443000" />
       <workItem from="1601773149682" duration="2611000" />
+      <workItem from="1601872609206" duration="718000" />
     </task>
     <task id="LOCAL-00001" summary="corrected and renamed to group3">
       <created>1596437743075</created>
