@@ -15,6 +15,7 @@ import EditOrDeleteBooking from './components/EditOrDeleteBooking';
 import About from './components/aboutUs';
 import CreateBooking_Service from "./components/CreateBooking_Service"
 import EditEmployee_List from "./components/EditEmployee_List"
+import CustomerBookingHistory from './components/CustomerBookingHistory';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
               <Route exact path="/CreateBooking_Service" component={CreateBooking_Service}/>
               <Route exact path="/cancel" component={EditOrDeleteBooking}/>
               <Route exact path="/employeeList" component={EditEmployee_List}/>
+              <Route exact path="/history" component={CustomerBookingHistory}/>
           </header>
           </div>
       </Router>

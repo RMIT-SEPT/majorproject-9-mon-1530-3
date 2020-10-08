@@ -18,7 +18,7 @@ export const PopupMenu = [
 
   {
     title: "booking history.",
-    url: "#",
+    url: "/history",
     cName: "nav-links",
   },
 

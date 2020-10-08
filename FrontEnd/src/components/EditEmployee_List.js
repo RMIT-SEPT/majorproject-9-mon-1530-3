@@ -62,16 +62,16 @@ export default class EditEmployee_List extends Component {
         var action = document.getElementById('action').value
 
 
-        if(action == "Remove Employee")
+        if(action === "Remove Employee")
         {
             this.setState({showServicesForm:false,showRosterForm:false})
             this.deleteEmployee(currentEmployee)
         }
-        else if(action == "Edit Employee detail or Service"){
+        else if(action === "Edit Employee detail or Service"){
             console.log(currentEmployee)
             this.setState({showServicesForm:true, showRosterForm:false})
         }
-        else if(action == "Edit Roster"){
+        else if(action === "Edit Roster"){
 
             this.setState({showServicesForm:false, showRosterForm:true})
         }
@@ -101,11 +101,11 @@ export default class EditEmployee_List extends Component {
 
     async updateEmployeeAction(){
 
-        if(document.getElementById('action').value == "Edit Employee detail or Service"){
+        if(document.getElementById('action').value === "Edit Employee detail or Service"){
         let adminResult = document.getElementById('admin').value
         console.log(adminResult)
         var adminBool = false;
-        if(adminResult == 'Yes'){
+        if(adminResult === 'Yes'){
             adminBool = true;
         }
     }
