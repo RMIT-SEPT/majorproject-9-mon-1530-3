@@ -11,5 +11,4 @@ public interface BookingRepository extends CrudRepository<Booking, Long> {
     @Override
     Iterable<Booking> findAll();
 
-
 }
