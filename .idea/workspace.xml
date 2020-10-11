@@ -17,14 +17,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57280a33-6cac-4ca6-8464-e1b884fcf9b4" name="Default Changelist" comment="Fixed CORS error">
-      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/payload/LoginRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/security/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/security/JwtAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/security/JwtTokenProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/security/JwtTokenProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/security/SecurityConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/security/SecurityConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/service/MapValidationErrorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/service/MapValidationErrorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/webController/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/webController/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/src/components/loginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/components/loginPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -190,7 +183,7 @@
       <workItem from="1601871378928" duration="1111000" />
       <workItem from="1601940036019" duration="9277000" />
       <workItem from="1602286351553" duration="7781000" />
-      <workItem from="1602372739834" duration="13880000" />
+      <workItem from="1602372739834" duration="15266000" />
     </task>
     <task id="LOCAL-00001" summary="corrected and renamed to group3">
       <created>1596437743075</created>
@@ -262,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601813272048</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="User Login Working">
+      <created>1602420259058</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1602420259058</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +303,8 @@
     <MESSAGE value="Sign Up Account - Customer" />
     <MESSAGE value="Initial Security Classes" />
     <MESSAGE value="User Creation Working" />
-    <option name="LAST_COMMIT_MESSAGE" value="User Creation Working" />
+    <MESSAGE value="User Login Working" />
+    <option name="LAST_COMMIT_MESSAGE" value="User Login Working" />
   </component>
   <component name="WindowStateProjectService">
     <state x="496" y="237" key="#Docker" timestamp="1600675495311">
@@ -447,14 +448,14 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="120" y="106" key="SettingsEditor/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1598578146574" />
-    <state x="729" y="332" width="1281" height="520" key="Vcs.Push.Dialog.v2" timestamp="1601813273454">
+    <state x="729" y="332" width="1281" height="520" key="Vcs.Push.Dialog.v2" timestamp="1602420260885">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="616" y="358" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1597286521996" />
     <state x="547" y="332" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600255055594" />
     <state x="729" y="332" key="Vcs.Push.Dialog.v2/0.0.2560.1040/313.-1080.1920.1040@0.0.2560.1040" timestamp="1601201049490" />
     <state x="880" y="460" width="1281" height="520" key="Vcs.Push.Dialog.v2/0.0.2560.1440/-1080.-469.1080.2560@0.0.2560.1440" timestamp="1596437764513" />
-    <state x="729" y="332" key="Vcs.Push.Dialog.v2/313.-1080.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1601813273454" />
+    <state x="729" y="332" key="Vcs.Push.Dialog.v2/313.-1080.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1602420260885" />
     <state x="885" y="461" key="VcsDiffUtil.ChangesDialog" timestamp="1596437480263">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
@@ -498,16 +499,6 @@
           <url>file://$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/security/JwtTokenProvider.java</url>
           <line>20</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/webController/UserController.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/webController/UserController.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/BackEnd/src/main/java/com/rmit/group3/spring/webController/CustomerController.java</url>

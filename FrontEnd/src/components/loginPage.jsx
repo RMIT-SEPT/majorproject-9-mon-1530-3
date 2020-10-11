@@ -31,12 +31,10 @@ class Login extends Component {
         let valid = await userLogin(user);
 
         if (valid["success"] === true){
-            localStorage.setItem('userType', valid["userType"])
-            localStorage.setItem('username',this.state.username);
-            localStorage.setItem('logged',true);
-            console.log(sessionStorage.getItem('username'));
-            console.log(sessionStorage.getItem('userType'));
-            console.log(sessionStorage.getItem('logged'));
+            let token = valid["token"].replace('Bearer ', '');
+            console.log(token)
+            localStorage.setItem("token", token)
+            console.log(sessionStorage.getItem("token"));
             alert("User, " + sessionStorage.getItem('username') + " is now logged in")
             window.location.replace("/");
         } else{
