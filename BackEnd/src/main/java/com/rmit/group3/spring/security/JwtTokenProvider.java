@@ -22,14 +22,12 @@ public class JwtTokenProvider {
 
         Date expiryDate = new Date(now.getTime()+EXPIRATION);
 
-        String username = user.getUsername();
-
         Map<String,Object> claims = new HashMap<>();
-        claims.put("username", username);
+        claims.put("username", user.getUsername());
         claims.put("userType", user.getUserType());
 
         return Jwts.builder()
-                .setSubject(username)
+                .setSubject(user.getUsername())
                 .setClaims(claims)
                 .setIssuedAt(now)
                 .setExpiration(expiryDate)
@@ -57,9 +55,9 @@ public class JwtTokenProvider {
 
     public String getUsernameFromJWT(String token){
         Claims claims = Jwts.parser().setSigningKey(SECRET).parseClaimsJws(token).getBody();
-        String id = (String)claims.get("username");
+        String username = (String)claims.get("username");
 
-        return id;
+        return username;
     }
 
 }

@@ -5,6 +5,7 @@ import com.rmit.group3.spring.model.Booking;
 import com.rmit.group3.spring.model.User;
 import com.rmit.group3.spring.payload.JWTLoginSuccessResponse;
 import com.rmit.group3.spring.security.JwtTokenProvider;
+import com.rmit.group3.spring.service.MapValidationErrorService;
 import com.rmit.group3.spring.service.UserService;
 import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,9 @@ import static com.rmit.group3.spring.security.SecurityConstants.TOKEN_PREFIX;
 @RequestMapping("/api/user")
 public class UserController {
     @Autowired
+    private MapValidationErrorService mapValidationErrorService;
+
+    @Autowired
     private UserService userService;
 
     @Autowired
@@ -41,17 +45,8 @@ public class UserController {
 
     @PostMapping("/login")
     public ResponseEntity<?> userLogin(@Valid @RequestBody User user, BindingResult result){
-        if(result.hasErrors()){
-            Map<String,String> errorMap = new HashMap<>();
-
-            for(FieldError error:result.getFieldErrors()){
-                return new ResponseEntity<List<FieldError>>(result.getFieldErrors(), HttpStatus.BAD_REQUEST);
-            }
-
-        }
-
-        //See if login success
-        boolean loginUser = userService.login(user);
+        ResponseEntity<?> errorMap = mapValidationErrorService.MapValidationService(result);
+        if(errorMap != null) { return errorMap;}
 
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
@@ -60,14 +55,10 @@ public class UserController {
                 )
         );
 
-        if (loginUser){
-            SecurityContextHolder.getContext().setAuthentication(authentication);
-            String jwt = TOKEN_PREFIX +  tokenProvider.generateToken(authentication);
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+        String jwt = TOKEN_PREFIX + tokenProvider.generateToken(authentication);
 
-            return ResponseEntity.ok(new JWTLoginSuccessResponse(true, jwt));
-        }
-
-        return new ResponseEntity<>(false,HttpStatus.NOT_ACCEPTABLE);
-
+        return ResponseEntity.ok(new JWTLoginSuccessResponse(true, jwt));
     }
+
 }

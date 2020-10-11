@@ -28,9 +28,9 @@ class Login extends Component {
             "userType":"customer"
         }
 
-        let valid = await userLogin(user)
+        let valid = await userLogin(user);
 
-        if (valid){
+        if (valid["success"] === true){
             localStorage.setItem('userType', valid["userType"])
             localStorage.setItem('username',this.state.username);
             localStorage.setItem('logged',true);
@@ -40,7 +40,7 @@ class Login extends Component {
             alert("User, " + sessionStorage.getItem('username') + " is now logged in")
             window.location.replace("/");
         } else{
-            console.log("user not found!")
+            alert("Error: user not found!")
         }
     }
 
