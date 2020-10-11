@@ -130,7 +130,6 @@ export class CreateBooking extends Component {
     //create array of options for form
     //For future update: add filter for existing booking times to not show
     const existingBookings = this.state.existingBookings;
-    console.log(existingBookings);
     var timeSlotOptions = timeSlots.map(function (time, i) {
 
       let minutes = time.getMinutes();
@@ -172,8 +171,18 @@ export class CreateBooking extends Component {
         }
       }, this);
 
+      var removeElement = function(array, val) {
+        for (var i=array.length - 1; i >=0; i--) {
+            if (array[i] == val) {
+                array.splice(i,1);
+            }
+        }
+        return array.length;
+    };
+
+    removeElement(timeSlotOptions,undefined);
+
     if(timeSlotOptions.length > 0 && timeSlotOptions[0]!==undefined){
-      console.log(timeSlotOptions)
       return<div style={{width:'100%'}} className="radio-toolbar">
       <div style={{float:"left"}}>{timeSlotOptions.slice(0,timeSlotOptions.length/2)}</div>
       <div style={{float:"right"}}>{timeSlotOptions.slice(timeSlotOptions.length/2,timeSlotOptions.length)}</div>
