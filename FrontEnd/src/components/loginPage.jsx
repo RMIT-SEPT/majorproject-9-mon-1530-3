@@ -28,19 +28,17 @@ class Login extends Component {
             "userType":"customer"
         }
 
-        let valid = await userLogin(user)
+        let valid = await userLogin(user);
 
-        if (valid){
-            localStorage.setItem('userType', valid["userType"])
-            localStorage.setItem('username',this.state.username);
-            localStorage.setItem('logged',true);
-            console.log(sessionStorage.getItem('username'));
-            console.log(sessionStorage.getItem('userType'));
-            console.log(sessionStorage.getItem('logged'));
+        if (valid["success"] === true){
+            let token = valid["token"].replace('Bearer ', '');
+            console.log(token)
+            localStorage.setItem("token", token)
+            console.log(sessionStorage.getItem("token"));
             alert("User, " + sessionStorage.getItem('username') + " is now logged in")
             window.location.replace("/");
         } else{
-            console.log("user not found!")
+            alert("Error: user not found!")
         }
     }
 
