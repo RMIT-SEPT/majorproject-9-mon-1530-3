@@ -35,7 +35,7 @@ class Login extends Component {
             console.log(token)
             localStorage.setItem("token", token)
             console.log(sessionStorage.getItem("token"));
-            alert("User, " + sessionStorage.getItem('username') + " is now logged in")
+            alert("User is now logged in")
             window.location.replace("/");
         } else{
             alert("Error: user not found!")
