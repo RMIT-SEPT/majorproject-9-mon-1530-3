@@ -24,18 +24,13 @@ public class BookingController {
     private BookingService bookingService;
 
     @PostMapping("")
-    public ResponseEntity<?> createNewBooking(@Valid @RequestBody Booking booking, BindingResult result)
+    public ResponseEntity<?> createNewBooking(@Valid @RequestBody Booking booking)
     {
-        if(result.hasErrors()){
-            Map<String,String> errorMap = new HashMap<>();
-
-            for(FieldError error:result.getFieldErrors()){
-                return new ResponseEntity<List<FieldError>>(result.getFieldErrors(), HttpStatus.BAD_REQUEST);
-            }
-
-        }
         Booking booking1 = bookingService.saveOrUpdateBooking(booking);
-        return new ResponseEntity<>(booking1.getBookingID(), HttpStatus.CREATED);
+        if(booking1 != null) {
+            return new ResponseEntity<>(booking1.getBookingID(), HttpStatus.CREATED);
+        }
+        return new ResponseEntity<>(0, HttpStatus.BAD_REQUEST);
     }
 
     @GetMapping("/get")

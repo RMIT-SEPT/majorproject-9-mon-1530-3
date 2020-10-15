@@ -77,7 +77,7 @@ export class CreateBooking extends Component {
 
     let bookingID = await createBooking(newBooking);
 
-    if (bookingID) {
+    if (Number.isInteger(bookingID) && bookingID !== 0) {
       console.log(bookingID);
       ReactDOM.render(
         <div>
