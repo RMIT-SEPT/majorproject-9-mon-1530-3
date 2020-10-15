@@ -101,23 +101,8 @@ export class CreateBooking extends Component {
         document.getElementById("booking")
       );
     } else {
-      console.log("error");
-      ReactDOM.render(
-        <div style={{ background: "white", color: "black" }}>
-        <div style={{ background: "white", color: "black" }}>
-          <h2>
-            Booking failed,
-            <br />
-            please try again;
-          </h2>
-          <br />
-          <br />
-          <a className="button" href="/CreateBooking">
-            reset
-          </a>
-        </div></div>,
-        document.getElementById("booking")
-      );
+            alert("Booking error, not created, please try again later.")
+            window.location.reload(false);
     }
   }
 
