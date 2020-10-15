@@ -81,8 +81,8 @@ export class CreateBooking extends Component {
       console.log(bookingID);
       ReactDOM.render(
         <div>
-        <div style={{ background: "white", color: "black" }}>
-          <h2>
+        <div style={{ background: "white", color: "black" , textAlign:"center"}}>
+          <h2 style={{ background: "white", color: "black" ,textAlign:"center"}}>
             Thank you,
             <br />
             your booking number is:
