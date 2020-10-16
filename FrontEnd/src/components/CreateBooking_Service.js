@@ -83,6 +83,9 @@ export default class CreateBooking_Service extends Component {
         if(newServices.length > 1){
             newServices.shift();
         }
+        if(newServices.includes("unassigned")){
+            newServices.splice(newServices.indexOf("unassigned"),1);
+        }
         this.setState({services:newServices, staff:newStaff, AllStaffDetails:allStaff, existingBookings:allBookings});
 
     }
