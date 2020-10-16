@@ -101,7 +101,7 @@ export class CreateBooking extends Component {
         document.getElementById("booking")
       );
     } else {
-            alert("Booking error, not created, please try again later.")
+            alert("Booking error, not created, please login first or try again later.")
             window.location.reload(false);
     }
   }
