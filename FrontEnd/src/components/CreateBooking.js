@@ -77,12 +77,12 @@ export class CreateBooking extends Component {
 
     let bookingID = await createBooking(newBooking);
 
-    if (bookingID) {
+    if (Number.isInteger(bookingID) && bookingID !== 0) {
       console.log(bookingID);
       ReactDOM.render(
         <div>
-        <div style={{ background: "white", color: "black" }}>
-          <h2>
+        <div style={{ background: "white", color: "black" , textAlign:"center"}}>
+          <h2 style={{ background: "white", color: "black" ,textAlign:"center"}}>
             Thank you,
             <br />
             your booking number is:
@@ -101,23 +101,8 @@ export class CreateBooking extends Component {
         document.getElementById("booking")
       );
     } else {
-      console.log("error");
-      ReactDOM.render(
-        <div style={{ background: "white", color: "black" }}>
-        <div style={{ background: "white", color: "black" }}>
-          <h2>
-            Booking failed,
-            <br />
-            please try again;
-          </h2>
-          <br />
-          <br />
-          <a className="button" href="/CreateBooking">
-            reset
-          </a>
-        </div></div>,
-        document.getElementById("booking")
-      );
+            alert("Booking error, not created, please try again later.")
+            window.location.reload(false);
     }
   }
 

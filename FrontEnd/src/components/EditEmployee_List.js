@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { isThisParameter } from 'tsutils';
 import {getAllEmployees,removeEmployee, updateEmployee} from '../actions/EmployeeActions';
 
 export default class EditEmployee_List extends Component {
