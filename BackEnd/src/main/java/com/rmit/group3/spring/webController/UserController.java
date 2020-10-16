@@ -9,6 +9,7 @@ import com.rmit.group3.spring.service.MapValidationErrorService;
 import com.rmit.group3.spring.service.UserService;
 import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,12 +21,14 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import static com.rmit.group3.spring.security.SecurityConstants.TOKEN_PREFIX;
+import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @CrossOrigin
 @RestController
@@ -62,6 +65,26 @@ public class UserController {
         String userType = validatedUser.getUserType();
 
         return ResponseEntity.ok(new JWTLoginSuccessResponse(true, jwt));
+    }
+
+    @PostMapping(value = "/token")
+    public ResponseEntity<?> getUsername(@RequestBody String token, BindingResult result){
+        if(result.hasErrors()){
+            Map<String,String> errorMap = new HashMap<>();
+
+            for(FieldError error:result.getFieldErrors()){
+                return new ResponseEntity<List<FieldError>>(result.getFieldErrors(), HttpStatus.BAD_REQUEST);
+            }
+
+        }
+
+        String username = tokenProvider.getUsernameFromJWT(token);
+        User user = userService.getUserType(username);
+        String userType = user.getUserType();
+        Map<String, String> body = new HashMap<>();
+        body.put("username", username);
+        body.put("userType", userType);
+        return new ResponseEntity<>(body, HttpStatus.ACCEPTED);
     }
 
 }

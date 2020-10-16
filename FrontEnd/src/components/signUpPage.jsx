@@ -45,6 +45,7 @@ class Register extends Component {
       if (valid === "username"){
           alert("Error: User already exists with that username")
       } else{
+          alert("USER");
           window.location.href = '/login';
       }
   }
