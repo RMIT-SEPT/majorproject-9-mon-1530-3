@@ -2,9 +2,11 @@ package com.rmit.group3.spring.webController;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.rmit.group3.spring.model.Booking;
+import com.rmit.group3.spring.model.Employee;
 import com.rmit.group3.spring.model.User;
 import com.rmit.group3.spring.payload.JWTLoginSuccessResponse;
 import com.rmit.group3.spring.security.JwtTokenProvider;
+import com.rmit.group3.spring.service.EmployeeService;
 import com.rmit.group3.spring.service.MapValidationErrorService;
 import com.rmit.group3.spring.service.UserService;
 import org.apache.coyote.Response;
@@ -39,6 +41,9 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private EmployeeService employeeService;
 
     @Autowired
     private AuthenticationManager authenticationManager;
@@ -80,7 +85,18 @@ public class UserController {
 
         String username = tokenProvider.getUsernameFromJWT(token);
         User user = userService.getUserType(username);
-        String userType = user.getUserType();
+        String userType = null;
+        if (employeeService.findByUser(user) != null){
+            Employee employee = employeeService.findByUser(user);
+            if(employee.isAdmin()){
+                userType = "admin";
+            } else{
+                userType = user.getUserType();
+            }
+        } else{
+            userType = user.getUserType();
+        }
+
         Map<String, String> body = new HashMap<>();
         body.put("username", username);
         body.put("userType", userType);

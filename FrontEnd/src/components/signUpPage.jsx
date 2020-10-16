@@ -38,7 +38,8 @@ class Register extends Component {
           "email": this.state.email,
           "username": this.state.username,
           "password": this.state.password,
-          "admin": this.state.admin
+          "admin": this.state.admin,
+          "service": "unassigned"
       }
 
       let valid = await signUp(user, this.state.userType)

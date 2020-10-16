@@ -3,6 +3,7 @@ package com.rmit.group3.spring.service;
 import com.rmit.group3.spring.Repositories.EmployeeRepository;
 import com.rmit.group3.spring.exceptions.EmployeeException;
 import com.rmit.group3.spring.model.Employee;
+import com.rmit.group3.spring.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -47,5 +48,8 @@ public class EmployeeService {
         }
     }
 
-
+    public Employee findByUser(User user){
+        String username = user.getUsername();
+        return employeeRepository.findByUsername(username);
+    }
 }
