@@ -11,7 +11,9 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.sql.Time;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -48,8 +50,8 @@ public class BookingControllerTests {
     void postBasicBooking() throws Exception{
 
         Booking testBooking = new Booking((long) 1, (long) 2,
-                new Date(2020,9,18),
-                new Time(9,00,00),
+                LocalDate.of(2020,9,18),
+                LocalTime.of(9,00,00),
                 true);
 
         mvc.perform(post("/api/booking").content(
@@ -63,8 +65,8 @@ public class BookingControllerTests {
 
         //Dummy booking (to preset a set booking ID)
         Booking testBooking = new Booking((long) 1, (long) 2,
-                new Date(2020,9,18),
-                new Time(9,00,00),
+                LocalDate.of(2020,9,18),
+                LocalTime.of(9,00,00),
                 true);
 
         testBooking.setBookingID((long) 1);
@@ -81,8 +83,8 @@ public class BookingControllerTests {
 
         //Dummy booking (to preset a set booking ID)
         Booking testBooking = new Booking((long) 2, (long) 2,
-                new Date(2020,9,18),
-                new Time(9,00,00),
+                LocalDate.of(2020,9,18),
+                LocalTime.of(9,00,00),
                 true);
         testBooking.setBookingID((long) 2);
 

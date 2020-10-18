@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {userLogin} from "../actions/LoginActions";
+import {getUsername, userLogin} from "../actions/LoginActions";
 import Logo from "./Layout/Logo"
 
 class Login extends Component {
@@ -28,19 +28,20 @@ class Login extends Component {
             "userType":"customer"
         }
 
-        let valid = await userLogin(user)
+        let valid = await userLogin(user);
 
-        if (valid){
-            localStorage.setItem('userType', valid["userType"])
-            localStorage.setItem('username',this.state.username);
-            localStorage.setItem('logged',true);
-            console.log(sessionStorage.getItem('username'));
-            console.log(sessionStorage.getItem('userType'));
-            console.log(sessionStorage.getItem('logged'));
-            alert("User, " + sessionStorage.getItem('username') + " is now logged in")
+        if (valid["success"] === true){
+            let token = valid["token"].replace('Bearer ', '');
+            let user = await getUsername(token);
+            console.log(token)
+            console.log(user)
+            sessionStorage.setItem("token", token)
+            sessionStorage.setItem("username", user["username"])
+            sessionStorage.setItem("userType", user["userType"])
+            alert("User, " + user["username"] + ", is now logged in");
             window.location.replace("/");
         } else{
-            console.log("user not found!")
+            alert("Error: user not found!")
         }
     }
 

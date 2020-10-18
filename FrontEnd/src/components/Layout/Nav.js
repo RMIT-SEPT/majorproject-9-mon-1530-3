@@ -32,9 +32,9 @@ class Nav extends Component {
               <ul
                 className={this.state.clicked ? "nav-menu active" : "nav-menu"}
               >
-                {PopupMenu.map((item) => {
+                {PopupMenu.map((item,i) => {
                   return (
-                    <a className={item.cName} href={item.url}>
+                    <a className={item.cName} href={item.url} key={item.cName + i}>
                         {item.title}
                       </a>
                   );

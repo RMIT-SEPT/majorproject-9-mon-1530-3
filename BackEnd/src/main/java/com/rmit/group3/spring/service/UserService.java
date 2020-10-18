@@ -6,10 +6,15 @@ import com.rmit.group3.spring.model.Customer;
 import com.rmit.group3.spring.model.Employee;
 import com.rmit.group3.spring.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UserService{
+
+    @Autowired
+    BCryptPasswordEncoder bCryptPasswordEncoder;
+
     @Autowired
     private UserRepository userRepository;
 
@@ -32,7 +37,7 @@ public class UserService{
     public User createFromCustomer(Customer customer){
         User newUser = new User();
         newUser.setUsername(customer.getUsername());
-        newUser.setPassword(customer.getPassword());
+        newUser.setPassword(bCryptPasswordEncoder.encode(customer.getPassword()));
         newUser.setUserType("customer");
 
         boolean existingUsername = checkUsername(newUser.getUsername());
@@ -47,7 +52,7 @@ public class UserService{
     public User createFromEmployee(Employee employee){
         User newUser = new User();
         newUser.setUsername(employee.getUsername());
-        newUser.setPassword(employee.getPassword());
+        newUser.setPassword(bCryptPasswordEncoder.encode(employee.getPassword()));
         newUser.setUserType("employee");
 
         boolean existingUsername = checkUsername(newUser.getUsername());
