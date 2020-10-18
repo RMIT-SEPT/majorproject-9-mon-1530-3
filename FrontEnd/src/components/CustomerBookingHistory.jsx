@@ -27,24 +27,17 @@ class CustomerBookingHistory extends Component {
 
     }
 
-    fetchData() {
-
-    }
-
 
     render() {
 
         let list = this.state.bookings.map((booking) => {
             return <li>"Date of Booking: " {booking.date}</li>
         });
-
-        let beees = <p>bee</p>
         
         return(
             <div>
                 <p>LIST OF ALL BOOKINGS</p>
                 {list}
-                {beees}
             </div>
         )
     }
